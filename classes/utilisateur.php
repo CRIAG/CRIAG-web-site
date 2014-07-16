@@ -1,7 +1,7 @@
 <?php 
 require_once("database.php");
 
- class utilisateur { 
+abstract class Utilisateur { 
 private static $_table = "utilisateur";
 		protected $utilisateur;
 		
@@ -50,6 +50,7 @@ private static $_table = "utilisateur";
 				return false;
 			}
 		}
+		 
 		 
 		public function create()
 		{
@@ -101,25 +102,25 @@ private static $_table = "utilisateur";
 			}
 		}
 		
-		/*
+		
 		abstract protected function find_by_id($id);
 		abstract protected function find_by_email($email);
 		abstract protected function count_all(); 
 		
-		*/
+		
 		
 	
 }
 
-$uti=new utilisateur();
+/*$uti=new Utilisateur();
 
 
-$uti->set_utilisateur('nom' , 'Ben Moussa');
-$uti->set_utilisateur('prenom', 'Salma');
-$uti->set_utilisateur('email', 'benmoussasalma1@gmail.com');
-$uti->set_utilisateur('adresse', 'Tanger');
-$uti->set_utilisateur('num_tel' , '0612345678');
-
+$uti->set_utilisateur("nom" , "Ben Moussa");
+$uti->set_utilisateur("prenom", "Salma");
+$uti->set_utilisateur("email", "benmoussasalma1@gmail.com");
+$uti->set_utilisateur("adresse", "Tanger");
+$uti->set_utilisateur("num_tel" , "0612345678");
+$uti->set_utilisateur("password" , "admin");
 if($uti->create()) {
 	echo ' OK';
 	}
@@ -128,3 +129,4 @@ if($uti->create()) {
 
     
 
+*/
