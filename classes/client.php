@@ -15,9 +15,10 @@ class Client extends Utilisateur {
 		{
 			$id=$db->last_insert_id();
 			$sql= "insert into client values(:id);";
-			$re = $db->query($sql, array("id"=>$db->last_insert_id()));
+			$re = $db->query($sql, array("id"=>$id));
 			if($db->affected_rows($re)>0)
 			{
+				$this->find_by_id($id);
 				return true;
 			}else
 			{
@@ -37,7 +38,7 @@ class Client extends Utilisateur {
 			$db->query($sql);
 			
 			$sql = " DELETE FROM client " ;
-			$sql .= " WHERE u_id=:u_id;"; 
+			$sql .= " WHERE utilisateur_u_id=:u_id;"; 
 			$re = $db->query($sql, array("u_id"=>$this->utilisateur["u_id"]));
 
 			if($db->affected_rows($re) > 0)
