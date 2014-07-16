@@ -30,7 +30,28 @@ class Client extends Utilisateur {
 		}
 	  	
 	}
-		
+		public function delete(){
+			global $db;
+			$sql = "set foreign_key_checks = 0;";
+			
+			$db->query($sql);
+			
+			$sql = " DELETE FROM client " ;
+			$sql .= " WHERE u_id=:u_id;"; 
+			$re = $db->query($sql, array("u_id"=>$this->utilisateur["u_id"]));
+
+			if($db->affected_rows($re) > 0)
+			{
+				parent::delete() ;
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			
+			
+			}
 	public function find_by_id($id)
 		{
 			global $db;
