@@ -1,7 +1,7 @@
 <?php
 require_once("database.php");
 require_once("utilisateur.php");
-class client extends Utilisateur {
+class Client extends Utilisateur {
 	
 	public function __construct()
 		{ 
