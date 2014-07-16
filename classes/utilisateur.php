@@ -3,7 +3,7 @@ require_once("database.php");
 
 
 abstract class Utilisateur { 
-private static $_table = "utilisateur";
+protected static $_table = "utilisateur";
 		protected $utilisateur;
 		
 		public function __construct()
@@ -89,7 +89,7 @@ private static $_table = "utilisateur";
 			
 			$sql = "UPDATE " . self::$_table;
 			$sql .= " SET ". implode(",", $array_key_key);
-			$sql .= " WHERE e_id=:e_id;";
+			$sql .= " WHERE u_id=:u_id;";
 			
 			$re = $db->query($sql, $this->utilisateur);
 
