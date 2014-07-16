@@ -6,7 +6,7 @@
 		==== Attributes:    
 						$_loged_in 
 						$_user_id  
-						$_etudiant 
+						$_client 
 						$_message  
 
 		==== Methodes :   
@@ -14,14 +14,12 @@
 						is_logedin();  
 						get_user_id();
 						set_user_id($id);
-						is_etudiant();
-						login($id, $etudiant);
+						is_client();
+						login($id, $client);
 						logout();
 						check_login();
 						is_there_any_msg();
-						remember_me();
-						is_there_cookie();
-
+						
 		===============================================
 	*/
 
@@ -29,7 +27,7 @@ class Session {
 
 	private  $_loged_in = false;
 	private  $_user_id;
-	private  $_etudiant = false;
+	private  $_client = false;
 	private $_message;
 	
 
@@ -38,7 +36,6 @@ class Session {
 	      session_start();
 
 		  $this->is_there_any_msg();
-		  $this->is_there_cookie();
 		  $this->check_login();		 
 	}
 
@@ -96,17 +93,17 @@ class Session {
 
 
 	/**
-	 * is_etudiant
+	 * is_client
 	 *
-	 *verifier si l'utilisateur est un etudiant ou prof
+	 *verifier si l'utilisateur est un client ou prof
 	 *
 	 *@params non
 	 *@return non
 	 *
 	*/
-	public function is_etudiant()
+	public function is_client()
 	{
-		return $this->_etudiant;
+		return $this->_client;
 	}
 
 
@@ -115,18 +112,18 @@ class Session {
 	 *
 	 *creer une session d'utilisateur
 	 *
-	 *@params int $id ,bool $etudiant
+	 *@params int $id ,bool $client
 	 *@return non
 	 *
 	*/
-	public function login($id, $etudiant)
+	public function login($id, $client)
 	{
 		$_SESSION["user_id"] = $id;
-		$_SESSION["etudiant"] = $etudiant;
+		$_SESSION["client"] = $client;
 
 		$this->_loged_in = true;
 		$this->_user_id = $id;
-		$this->_etudiant = $etudiant;
+		$this->_client = $client;
 	}
 
 
@@ -144,10 +141,10 @@ class Session {
 		if ($this->_loged_in)
 		{
 			$this->_loged_in = false;
-			$this->_etudiant = false;
+			$this->_client = false;
 
 			unset($_SESSION["user_id"]);
-			unset($_SESSION["etudiant"]);
+			unset($_SESSION["client"]);
 			unset($this->_user_id);
 
 			setcookie("auth", "", time(), "/", "localhost", false, true);
@@ -169,13 +166,13 @@ class Session {
 		if(isset($_SESSION["user_id"]))
 		{
 		    $this->_user_id = $_SESSION["user_id"];
-			$this->_etudiant = $_SESSION["etudiant"];
+			$this->_client = $_SESSION["client"];
 			$this->_loged_in = true;	
 		}
 		else
 		{
 			$this->_loged_in = false;
-			$this->_etudiant = false;
+			$this->_client = false;
 			unset($this->_user_id);
 		}
 	}
@@ -226,41 +223,9 @@ class Session {
 	}
 
 
-	/**
-	 * remember_me
-	 *
-	 *creer un cookie valide pour 7 jours 
-	 *
-	 *@params non
-	 *@return noo
-	 *
-	*/
-	public function remember_me()
-	{
-		//user id must be crypted and compared with user email and password
-		setcookie("auth", $this->_user_id."-".$this->_etudiant, time()+3600*24*7, "/", "localhost", false, true);
-	}
+	
 
-
-	/**
-	 * is_there_cookie
-	 *
-	 *lorsq'on quite le navigateur et on revient 
-	 *cette fonctio s'ocupe d'extraire les donne de cookie et les met dans la session 
-	 *
-	 *@params non
-	 *@return noo
-	 *
-	*/
-	public function is_there_cookie()
-	{
-		if(!isset($_SESSION["user_id"]) && isset($_COOKIE["auth"]))
-		{
-			$data_array = explode("-", $_COOKIE["auth"]);
-			$_SESSION["user_id"] = $data_array[0]; 
-			$_SESSION["etudiant"] = $data_array[1];
-		}
-	}
+	
 	
 }
 ?>
