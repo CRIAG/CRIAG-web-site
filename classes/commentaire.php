@@ -132,7 +132,6 @@ require_once("database.php");
 			
 			return array_shift($resultat);
 		}
-
 	
 		
 	

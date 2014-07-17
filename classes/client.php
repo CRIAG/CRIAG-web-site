@@ -121,8 +121,52 @@ class Client extends Utilisateur {
 				return false;
 			}
 		}
+		
+		public function beneficier($svc_id)
+		{
+			global $db;
+			$sql= "insert into beneficier values(:client_id,:svc_id);";
+			$re = $db->query($sql, array("client_id"=>$this->utilisateur["u_id"],"svc_id"=>$svc_id));
+			if($db->affected_rows($re)>0)
+			{
+				
+				return true;
+			}else
+			{
+			  return   false;
+			}
+		}
 	
 	
+	public function mes_services()
+	{
+		global $db;
+
+			$sql = "SELECT *
+				    FROM beneficier where client_utilisateur_u_id=:id;";	
+		   
+		    $list = array();
+			$re = $db->query($sql,array("id"=>$this->utilisateur["u_id"]));
+			$list = $re->fetchAll(PDO::FETCH_ASSOC);
+			
+			return $list;
+	
+	}
+	
+	public function mes_reclamations()
+	{
+		global $db;
+
+			$sql = "SELECT *
+				    FROM reclamation  where client_utilisateur_u_id=:id;";	
+		   
+		    $list = array();
+			$re = $db->query($sql,array("id"=>$this->utilisateur["u_id"]));
+			$list = $re->fetchAll(PDO::FETCH_ASSOC);
+			
+			return $list;
+	
+	}
 	
 	
 	

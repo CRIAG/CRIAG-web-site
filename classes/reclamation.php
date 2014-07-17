@@ -131,6 +131,22 @@ require_once("database.php");
 			
 			return array_shift($resultat);
 		}
+		
+		public static function mes_commentaires($re_id)
+	{
+		global $db;
+
+			$sql = "SELECT *
+				    FROM commentaire  where reclamation_re_id=:id;";	
+		   
+		    $list = array();
+			$re = $db->query($sql,array("id"=>$re_id));
+			$list = $re->fetchAll(PDO::FETCH_ASSOC);
+			
+			return $list;
+	
+	}
+
 
 	
 		
