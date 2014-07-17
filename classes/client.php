@@ -99,9 +99,74 @@ class Client extends Utilisateur {
 	
 	
 	
+	public function authenticate($email, $password)
+		{
+			global $db;
+
+			$sql = "SELECT utilisateur.password FROM 
+				  utilisateur inner join client on utilisateur.u_id = client.utilisateur_u_id
+				   WHERE email=:email
+				   LIMIT 1;";
+
+			$re = $db->query($sql, array("email"=>$email));
+			$resultat = $re->fetch();
+			$resultat = $resultat['password'];
+
+			if($password==$resultat)
+			{
+				
+				return true;
+			}else
+			{
+				return false;
+			}
+		}
+		
+		public function beneficier($svc_id)
+		{
+			global $db;
+			$sql= "insert into beneficier values(:client_id,:svc_id);";
+			$re = $db->query($sql, array("client_id"=>$this->utilisateur["u_id"],"svc_id"=>$svc_id));
+			if($db->affected_rows($re)>0)
+			{
+				
+				return true;
+			}else
+			{
+			  return   false;
+			}
+		}
 	
 	
+	public function mes_services()
+	{
+		global $db;
+
+			$sql = "SELECT *
+				    FROM beneficier where client_utilisateur_u_id=:id;";	
+		   
+		    $list = array();
+			$re = $db->query($sql,array("id"=>$this->utilisateur["u_id"]));
+			$list = $re->fetchAll(PDO::FETCH_ASSOC);
+			
+			return $list;
 	
+	}
+	
+	public function mes_reclamations()
+	{
+		global $db;
+
+			$sql = " SELECT *
+				    FROM reclamation  where client_utilisateur_u_id=:id;";	
+		   
+		    $list = array();
+			$re = $db->query($sql,array("id"=>$this->utilisateur["u_id"]));
+			$list = $re->fetchAll(PDO::FETCH_ASSOC);
+			
+			return $list;
+	
+	}
 	
 	
 	
