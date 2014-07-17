@@ -50,10 +50,17 @@ class Database{
 	*/
 	public function query($sql, $data = array())
 	{
+		$this->_db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+		
 		$q = $this->_db->prepare($sql);
+		try {
 		$q->execute($data); 	
-	 	return $q;
-	}
+		} catch (PDOException $e) {
+		echo $e->getMessage();
+		}
+		 	
+		return $q;
+		}
 
 	/**=======================================
 	 * last_insert_id
