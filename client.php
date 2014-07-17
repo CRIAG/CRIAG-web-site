@@ -14,6 +14,9 @@
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
+     <link href="css/jquery_popup.css" rel="stylesheet">
+    
+    
     
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -74,126 +77,113 @@
                         <li><a href="about-us.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
-                        <li class="dropdown">
+                        <li class="dropdown active">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="client.php">Blog Single</a></li>
+                                <li class="active"><a href="client.php">Blog Single</a></li>
                                 <li><a href="pricing.html">Pricing</a></li>
                                 <li><a href="404.html">404</a></li>
                                 <li><a href="shortcodes.html">Shortcodes</a></li>
+                                </li>
                             </ul>
                         </li>
                         <li><a href="blog.html">Blog</a></li> 
-                        <li class="active"><a href="contact-us.html">Contact</a></li>                        
+                        <li><a href="contact-us.html">Contact</a></li>                        <li><a href="#" id="loginbt">Login</a>
                     </ul>
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
+        
     </header><!--/header-->
 
-    <section id="contact-info">
-        <div class="center">                
-            <h2>How to Reach Us?</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+
+    <section id="blog" class="container">
+     
+     <div class="center">
+            <h2>EL Guenouni Otmane</h2>
         </div>
-        <div class="gmap-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-5 text-center">
-                        <div class="gmap">
-                            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=JoomShaper,+Dhaka,+Dhaka+Division,+Bangladesh&amp;aq=0&amp;oq=joomshaper&amp;sll=37.0625,-95.677068&amp;sspn=42.766543,80.332031&amp;ie=UTF8&amp;hq=JoomShaper,&amp;hnear=Dhaka,+Dhaka+Division,+Bangladesh&amp;ll=23.73854,90.385504&amp;spn=0.001515,0.002452&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=1073661719450182870&amp;output=embed"></iframe>
+      <div class="blog">
+          <div class="row">
+            <div class="col-md-8">
+            <div class="blog-item">
+                      <div class="row" style="padding-left:15px;">
+                        <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
+                                <div class="row">
+                                  <div class="col-sm-7">                        
+                                      <div class="form-group">
+                                            <label>Reclamation:</label>
+                                            <textarea name="message" id="message" required class="form-control" rows="8" style="50px;border:rgba(0,0,0,1) solid 1px;width:650px"></textarea>
+                                        </div>                        
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-lg" required="required">Envoyer</button> 
+                                            <select style="width:150px;height:25px; float:right;margin-top:17px;" >
+                                            <option value="">op1</option>
+                                            <option value="">op2</option>
+                                            <option value="">op3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+              </div>
+              </div>
+                    <div class="blog-item">
+                      <div class="row">  
+                          <div class="col-xs-12 col-sm-2 text-center">
+                                    <div class="entry-meta">
+                                        <span id="publish_date">07  NOV</span>
+                                        <span><i class="fa fa-user"></i> <a href="#"> John Doe</a></span>
+                                        <span><i class="fa fa-comment"></i> <a href="client.php#comments">2 Reponces</a></span>
+                                        <span><i class="fa fa-eye"></i><a href="#">Vue</a></span>
+                                    </div>
                         </div>
-                    </div>
+                                <div class="col-xs-12 col-sm-10 blog-content">
+                                    <h2>Consequat bibendum quam</h2>
+                                    <p>Curabitur quis libero leo, pharetra mattis eros. Praesent consequat libero eget dolor convallis vel rhoncus magna scelerisque. Donec nisl ante, elementum eget posuere a, consectetur a metus. Proin a adipiscing sapien. Suspendisse vehicula porta lectus vel semper. Nullam sapien elit, lacinia eu tristique non.posuere at mi. Morbi at turpis id urna ullamcorper ullamcorper.</p>
 
-                    <div class="col-sm-7 map-content">
-                        <ul class="row">
-                            <li class="col-sm-6">
-                                <address>
-                                    <h5>Head Office</h5>
-                                    <p>1537 Flint Street <br>
-                                    Tumon, MP 96911</p>
-                                    <p>Phone:670-898-2847 <br>
-                                    Email Address:info@domain.com</p>
-                                </address>
+                                    <p>Curabitur quis libero leo, pharetra mattis eros. Praesent consequat libero eget dolor convallis vel rhoncus magna scelerisque. Donec nisl ante, elementum eget posuere a, consectetur a metus. Proin a adipiscing sapien. Suspendisse vehicula porta lectus vel semper.</p>
+                                </div>
+                      </div>
+              </div><!--/.blog-item-->
 
-                                <address>
-                                    <h5>Zonal Office</h5>
-                                    <p>1537 Flint Street <br>
-                                    Tumon, MP 96911</p>                                
-                                    <p>Phone:670-898-2847 <br>
-                                    Email Address:info@domain.com</p>
-                                </address>
-                            </li>
-
-
-                            <li class="col-sm-6">
-                                <address>
-                                    <h5>Zone#2 Office</h5>
-                                    <p>1537 Flint Street <br>
-                                    Tumon, MP 96911</p>
-                                    <p>Phone:670-898-2847 <br>
-                                    Email Address:info@domain.com</p>
-                                </address>
-
-                                <address>
-                                    <h5>Zone#3 Office</h5>
-                                    <p>1537 Flint Street <br>
-                                    Tumon, MP 96911</p>
-                                    <p>Phone:670-898-2847 <br>
-                                    Email Address:info@domain.com</p>
-                                </address>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>  <!--/gmap_area -->
-
-    <section id="contact-page">
-        <div class="container">
-            <div class="center">        
-                <h2>Drop Your Message</h2>
-                <p class="lead">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div> 
-            <div class="row contact-wrap"> 
-                <div class="status alert alert-success" style="display: none"></div>
-                <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
-                    <div class="col-sm-5 col-sm-offset-1">
-                        <div class="form-group">
-                            <label>Name *</label>
-                            <input type="text" name="name" class="form-control" required>
+                        <h1 id="comments_title">5 Réponces</h1>
+                        <div class="media comment_section">
+                            <div class="pull-left post_comments">
+                                <a href="#"><img src="images/blog/girl.png" class="img-circle" alt="" /></a>
+                            </div>
+                            <div class="media-body post_reply_comments">
+                                <h3>Marsh</h3>
+                                <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>Email *</label>
-                            <input type="email" name="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Phone</label>
-                            <input type="number" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>Company Name</label>
-                            <input type="text" class="form-control">
-                        </div>                        
-                    </div>
-                    <div class="col-sm-5">
-                        <div class="form-group">
-                            <label>Subject *</label>
-                            <input type="text" name="subject" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Message *</label>
-                            <textarea name="message" id="message" required class="form-control" rows="8"></textarea>
-                        </div>                        
-                        <div class="form-group">
-                            <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Submit Message</button>
-                        </div>
-                    </div>
-                </form> 
-            </div><!--/.row-->
-        </div><!--/.container-->
-    </section><!--/#contact-page-->
+                        <!--/#contact-page-->
+            </div><!--/.col-md-8-->
+
+                <aside class="col-md-4">
+                     
+
+                    <div class="widget categories">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="blog_category">
+                                    <li><a href="#">Paramètre </a></li>
+                                    <li><a href="#">Service proposer </a></li>
+                                      <li><a href="#">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>                     
+                    </div><!--/.categories-->
+    					
+    				
+                </aside>     
+
+        </div><!--/.row-->
+
+      </div><!--/.blog-->
+
+    </section><!--/#blog-->
+
 
     <section id="bottom">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -260,7 +250,28 @@
             </div>
         </div>
     </section><!--/#bottom-->
+  
+  <!--Login Form -->	
+        <div id="logindiv">			
+            <form class="form" action="#" id="login">
+                <img src="images/button_cancel.png" class="img" id="cancel"/>	
+                <h3>Login Form</h3>
+                <hr/><br/>
+                <label>Email : </label>
+                <br/>
+                <input type="text" id="email" placeholder="Ex -john123"/><br/>
+                <br/>
+                <label>password : </label>
+                <input type="text" id="password" placeholder="************"/><br/>
+                <br/>
+                <input type="button" id="loginbtn" value="Login"/>
+                <input type="button" id="cancel" value="Cancel"/>
+                <br/> 
 
+            </form>
+
+        </div>
+  
     <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
@@ -285,5 +296,6 @@
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/ajax.js"></script>
 </body>
 </html>
