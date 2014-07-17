@@ -93,8 +93,8 @@ class Database{
 
 $db = new Database();
 /*
-	$sql="insert into etudiant (E_nom,E_prenom) values (:E_nom,:E_prenom)";
-	$data=array("E_nom"=>"otmane","E_prenom"=>"el guenouni");
+	$sql="insert into utilisateur (nom,prenom,email,password) values (:nom,:prenom, :email, :password)";
+	$data=array("nom"=>"otmane","prenom"=>"el guenouni", "email"=>"otmane@gmail.com", "password"=>"otm");
 	$re=$db->query($sql,$data);
 	echo $db->affected_rows($re)."<br>";
 	echo $db->last_insert_id()."<br>";
