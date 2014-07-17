@@ -147,7 +147,6 @@ class Session {
 			unset($_SESSION["client"]);
 			unset($this->_user_id);
 
-			setcookie("auth", "", time(), "/", "localhost", false, true);
 		}
 	}
 

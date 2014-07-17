@@ -33,7 +33,7 @@ require_once("database.php");
 			$sql = "INSERT INTO " . self::$_table;
 			$sql .= " (" . implode(",",array_keys($this->service)) . ")";
 			$sql .= " values(:".implode(", :",array_keys($this->service)) . ");";
-			echo $sql;
+			//echo $sql;
 			$re = $db->query($sql, $this->service);
 
 			if($db->affected_rows($re) > 0)
@@ -136,3 +136,4 @@ require_once("database.php");
  
 
 
+?>
