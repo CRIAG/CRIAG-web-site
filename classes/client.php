@@ -99,7 +99,28 @@ class Client extends Utilisateur {
 	
 	
 	
-	
+	public function authenticate($email, $password)
+		{
+			global $db;
+
+			$sql = "SELECT utilisateur.password FROM 
+				  utilisateur inner join client on utilisateur.u_id = client.utilisateur_u_id
+				   WHERE email=:email
+				   LIMIT 1;";
+
+			$re = $db->query($sql, array("email"=>$email));
+			$resultat = $re->fetch();
+			$resultat = $resultat['password'];
+
+			if($password==$resultat)
+			{
+				
+				return true;
+			}else
+			{
+				return false;
+			}
+		}
 	
 	
 	

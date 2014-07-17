@@ -29,28 +29,6 @@ protected static $_table = "utilisateur";
 		{
 			return $this->utilisateur;
 		}
-		
-		public function authenticate($email, $password)
-		{
-			global $db;
-
-			$sql = "SELECT password FROM " . self::$_table;
-			$sql .= " WHERE email=:email"; 
-			$sql .= " LIMIT 1;";
-
-			$re = $db->query($sql, array("email"=>$email));
-			$resultat = $re->fetch();
-			$resultat = $resultat['password'];
-
-			if($password==$resultat)
-			{
-				
-				return true;
-			}else
-			{
-				return false;
-			}
-		}
 		 
 		 
 		public function create()
@@ -126,7 +104,7 @@ protected static $_table = "utilisateur";
 		
 		
 		
-		
+		abstract protected function authenticate($email, $password);
 		abstract protected function find_by_id($id);
 		abstract protected function find_by_email($email);
 		abstract protected function count_all(); 
