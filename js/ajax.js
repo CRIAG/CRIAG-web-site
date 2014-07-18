@@ -1,8 +1,25 @@
 // JavaScript Document
 var count =0;
+var show_ser=false;
 $(document).ready(function() {
 	
 	loadData(count);
+	
+	
+	 $("#show_services").click(function(){
+		 if(!show_ser) 
+		 {
+			 show_ser=true;
+		    $("#all_services").show();
+		 }
+		 else
+		 {
+			 show_ser=false;
+		    $("#all_services").hide();
+		 }
+		 return false;
+	 });
+
 	
      $("#loginbt").click(function(){
 		 popup();
@@ -98,6 +115,36 @@ $(document).ready(function() {
 			});
 			return false;
 });
+
+//choit de service par client
+$("#ajouter").click(function ()
+       {
+		 var service= $("#select_all").val();
+		 
+		// console.log(service);
+		  
+	  var sData={
+				"service":service
+			}
+		   $.ajax({
+			url: "includes/client_service.php",
+			type: "POST",
+			data: sData,
+			statutsCode: {
+				404 : function() {
+						$('.msg').text('not found page')
+					  }
+				},	
+			success: function(data, statutsText,xhr) {
+				      $("#tab").append(data);
+					 },
+			error : function (xhr, ajaxOptions, thrownError){
+				alert(thrownError);
+					}
+			});
+			return false;
+			
+			s});
 
 
 

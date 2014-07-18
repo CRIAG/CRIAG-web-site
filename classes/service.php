@@ -128,6 +128,18 @@ require_once("database.php");
 			
 			return array_shift($resultat);
 		}
+		
+		public static function services()
+		{
+			global $db;
+
+			$sql = "SELECT * FROM service;" ;
+			
+             $resultat=array();
+			$re = $db->query($sql);
+			$resultat = $re->fetchAll(PDO::FETCH_ASSOC);
+			return $resultat;
+		}
 
 	
 		

@@ -7,6 +7,7 @@ if(!$session->is_logedin() || !$session->is_client()){
 	header("location:index.html");
 }
 require_once("classes/client.php");
+require_once("classes/service.php");
 require_once("includes/functions.php");
 
 $client= new Client();
@@ -156,13 +157,38 @@ $client_data=$client->find_by_id($session->get_user_id())
                             <div class="col-sm-6">
                                 <ul class="blog_category">
                                     <li><a href="#">Paramètre </a></li>
-                                    <li><a href="#">Service proposer </a></li>
+                                   
+                                    <li><a href="#" id="show_services">Service proposer </a></li>
                                       <li><a href="#">Logout</a></li>
                                 </ul>
                             </div>
                         </div>                     
                     </div><!--/.categories-->
-    					
+    					        <div class="widget categories" style="padding-left:20px;display:none" id="all_services">
+                                 <table border="1" id="tab">
+                                         <?php foreach( $services as $service){
+		 echo '<tr>
+		 <td>'.$service["svc_nom"].'</td>
+		 <td>'.$service["svc_type"].'</td>
+		 <td><button value="'.$service["svc_id"].'">supprimer</button></td>
+		 </tr>';
+                                             } ?>  
+                                         
+                                </table> 
+                                <form>       
+                                <select  id="select_all">
+                                           <?php 
+										   $svcs=Service::services();
+										   print_r($svcs);
+										   foreach( $svcs as $svc){
+										      echo '<option value="'.$svc["svc_id"].'">'.$svc["svc_nom"].'</option>';
+                                             } ?>
+                                            </select> 
+                                            <button type="submit" id="ajouter" >Ajouter</button> 
+                                            
+                                            </form>       
+                    </div>
+                               
     				
                 </aside>     
 
