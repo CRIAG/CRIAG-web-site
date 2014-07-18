@@ -2,27 +2,30 @@
 require_once("database.php");
 
 
- class Service { 
-      private static $_table = "service";
-		private $service;
+ class Reclamation { 
+      private static $_table = "reclamation";
+		private $reclamation;
 		
 		public function __construct()
 		{
-			$this->service = array(	"svc_id"=>null,
-										"svc_nom"=>null,
-										"svc_type"=>null
+			$this->reclamation = array(	"re_id"=>null,
+										"service_id"=>null,
+										"re_date"=>null,
+										"client_utilisateur_u_id"=>null,
+										"re_text"=>null,
+										"vue"=>null
 									);
 		}
 		
 		
-		public function set_service($key, $value)
+		public function set_reclamation($key, $value)
 		{
-			$this->service[$key] = $value;
+			$this->reclamation[$key] = $value;
 		}
 		
-		public function get_service()
+		public function get_reclamation()
 		{
-			return $this->service;
+			return $this->reclamation;
 		}
 		
 		 
@@ -31,10 +34,10 @@ require_once("database.php");
 			global $db;
 
 			$sql = "INSERT INTO " . self::$_table;
-			$sql .= " (" . implode(",",array_keys($this->service)) . ")";
-			$sql .= " values(:".implode(", :",array_keys($this->service)) . ");";
-			// echo $sql;
-			$re = $db->query($sql, $this->service);
+			$sql .= " (" . implode(",",array_keys($this->reclamation)) . ")";
+			$sql .= " values(:".implode(", :",array_keys($this->reclamation)) . ");";
+			//echo $sql;
+			$re = $db->query($sql, $this->reclamation);
 
 			if($db->affected_rows($re) > 0)
 			{
@@ -53,8 +56,8 @@ require_once("database.php");
 			$db->query($sql);
 			
 			$sql = " DELETE FROM " .self::$_table;
-			$sql .= " WHERE svc_id=:id;"; 
-			$re = $db->query($sql, array("id"=>$this->service["svc_id"]));
+			$sql .= " WHERE re_id=:id;"; 
+			$re = $db->query($sql, array("id"=>$this->reclamation["re_id"]));
 
 			if($db->affected_rows($re) > 0)
 			{
@@ -71,7 +74,7 @@ require_once("database.php");
 		{
 			global $db;
 
-			$shifted = $this->service;
+			$shifted = $this->reclamation;
 			array_shift($shifted);
 			$array_key_key = array();
 
@@ -82,9 +85,9 @@ require_once("database.php");
 			
 			$sql = "UPDATE " . self::$_table;
 			$sql .= " SET ". implode(",", $array_key_key);
-			$sql .= " WHERE svc_id=:svc_id;";
+			$sql .= " WHERE re_id=:re_id;";
 			
-			$re = $db->query($sql, $this->service);
+			$re = $db->query($sql, $this->reclamation);
 
 			if($db->affected_rows($re) > 0)
 			{
@@ -105,13 +108,13 @@ require_once("database.php");
 			global $db;
 
 			$sql = "SELECT * FROM ".self::$_table ;
-			$sql .= " WHERE svc_id=:id" ; 
+			$sql .= " WHERE re_id=:id" ; 
 			$sql .= " LIMIT 1;";
 
 			$re = $db->query($sql, array("id"=>$id));
 			$resultat = $re->fetch(PDO::FETCH_ASSOC);
 
-			$this->service = $resultat;
+			$this->reclamation = $resultat;
 			
 			return $resultat;
 		}
@@ -128,6 +131,22 @@ require_once("database.php");
 			
 			return array_shift($resultat);
 		}
+		
+		public static function mes_commentaires($re_id)
+	{
+		global $db;
+
+			$sql = " SELECT *
+				    FROM commentaire  where reclamation_re_id=:id;";	
+		   
+		    $list = array();
+			$re = $db->query($sql,array("id"=>$re_id));
+			$list = $re->fetchAll(PDO::FETCH_ASSOC);
+			
+			return $list;
+	
+	}
+
 
 	
 		
