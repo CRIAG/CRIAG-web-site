@@ -1,5 +1,9 @@
 // JavaScript Document
+var count =0;
 $(document).ready(function() {
+	
+	loadData(count);
+	
      $("#loginbt").click(function(){
 		 popup();
 	 });
@@ -49,7 +53,11 @@ $(document).ready(function() {
 					  }
 				},	
 			success: function(data, statutsText,xhr) {
-				alert(data);
+				if(data.toString()=="client"){
+					window.location.replace("client.php");
+				}else{
+					window.location.replace("admin.php");
+				}
 						
 					 },
 			error : function (xhr, ajaxOptions, thrownError){
@@ -60,8 +68,41 @@ $(document).ready(function() {
 		
         }
     });
+      ///load client data
+	  
+
+
+
 
 });
 
- 
+function loadData(count)
+{
+	var sData={
+				"load":count
+			}
+		   $.ajax({
+			url: "includes/load.php",
+			type: "POST",
+			data: sData,
+			statutsCode: {
+				404 : function() {
+						$('.msg').text('not found page')
+					  }
+				},	
+			success: function(data, statutsText,xhr) {
+				    //alert(data)
+					//$(data).insertAfter(".blog-item:last-of-type");
+					$(".col-md-8").append(data);
+						
+					 },
+			error : function (xhr, ajaxOptions, thrownError){
+				alert(thrownError);
+					}
+			});
+			return false;
+
+	
+}
+
 	
