@@ -114,7 +114,7 @@ class Client extends Utilisateur {
 
 			if($password==$resultat)
 			{
-				
+				$this->find_by_email($email);
 				return true;
 			}else
 			{
@@ -142,9 +142,10 @@ class Client extends Utilisateur {
 	{
 		global $db;
 
-			$sql = "SELECT *
-				    FROM beneficier where client_utilisateur_u_id=:id;";	
-		   
+			$sql = "SELECT service.svc_id,service.svc_nom,service.svc_type
+					FROM service inner join  beneficier on beneficier.service_svc_id=service.svc_id
+					where client_utilisateur_u_id=:id;";	
+							   
 		    $list = array();
 			$re = $db->query($sql,array("id"=>$this->utilisateur["u_id"]));
 			$list = $re->fetchAll(PDO::FETCH_ASSOC);
@@ -158,7 +159,8 @@ class Client extends Utilisateur {
 		global $db;
 
 			$sql = " SELECT *
-				    FROM reclamation  where client_utilisateur_u_id=:id;";	
+				    FROM reclamation  where client_utilisateur_u_id=:id
+					order by re_id desc;";	
 		   
 		    $list = array();
 			$re = $db->query($sql,array("id"=>$this->utilisateur["u_id"]));

@@ -115,7 +115,7 @@ class Admin extends Utilisateur {
 
 			if($password==$resultat)
 			{
-				
+				$this->find_by_email($email);
 				return true;
 			}else
 			{

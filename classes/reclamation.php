@@ -146,6 +146,19 @@ require_once("database.php");
 			return $list;
 	
 	}
+	public static function commentaires_counts($re_id)
+	{
+		global $db;
+
+			$sql = " SELECT count(*)
+				    FROM commentaire  where reclamation_re_id=:id;";	
+		   
+			$re = $db->query($sql,array("id"=>$re_id));
+			$resultat = $re->fetch(PDO::FETCH_ASSOC);
+			
+			return array_shift($resultat);
+	
+	}
 
 
 	
