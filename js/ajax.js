@@ -121,6 +121,7 @@ $(document).ready(function() {
 $("#ajouter").click(function ()
        {
 		 var service= $("#select_all").val();
+		 var nom= $("#select_all option:selected").text();
 		 
 		// console.log(service);
 		  
@@ -138,6 +139,9 @@ $("#ajouter").click(function ()
 				},	
 			success: function(data, statutsText,xhr) {
 				      $("#tab").append(data);
+					  var string ='<option value="'+service+'" id="op_'+service+'">'+nom+'</option>';
+					 console.log(string);
+					 $("#select").append(string);
 					 },
 			error : function (xhr, ajaxOptions, thrownError){
 				alert(thrownError);
