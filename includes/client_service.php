@@ -31,16 +31,24 @@ if( isset($_POST["service"]))
 	$service= new Service();
 	$data=$service->find_by_id($_POST['service']);
 	
-	echo '<tr>
-		 <td>'.$data["svc_nom"].'</td>
-		 <td>'.$data["svc_type"].'</td>
-		 <td><button value="'.$data["svc_id"].'">supprimer</button></td>
+	echo '<tr id="re_'.escape($data["svc_id"]).'">
+		 <td>'.escape($data["svc_nom"]).'</td>
+		 <td>'.escape($data["svc_type"]).'</td>
+		 <td><button onClick="return delete_service('.escape($data["svc_id"]).');" >supprimer</button></td>
 		 </tr>';
 	
 	
+}else if(isset($_POST["rec_id"]))
+{
+	if(!$client->delete_beneficier($_POST["rec_id"]))
+	{
+		header('HTTP/1.1 500 , vérifier que tu n\'a pas reclamer aucune réclamation avec ce service');
+	    exit();	
+	}
+	echo "deleted";
 }else
 {
-header('HTTP/1.1 500 , ther is no post request');
+header('HTTP/1.1 500 , there is no post request');
 	    exit();	
 }
 

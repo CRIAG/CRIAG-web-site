@@ -136,6 +136,21 @@ class Client extends Utilisateur {
 			  return   false;
 			}
 		}
+	   
+	   public function delete_beneficier($svc_id)
+		{
+			global $db;
+			$sql= "delete from  beneficier where client_utilisateur_u_id=:client_id and service_svc_id=:svc_id;";
+			$re = $db->query($sql, array("client_id"=>$this->utilisateur["u_id"],"svc_id"=>$svc_id));
+			if($db->affected_rows($re)>0)
+			{
+				
+				return true;
+			}else
+			{
+			  return   false;
+			}
+		}
 	
 	
 	public function mes_services()

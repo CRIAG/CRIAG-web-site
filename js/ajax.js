@@ -108,6 +108,7 @@ $(document).ready(function() {
 				},	
 			success: function(data, statutsText,xhr) {
 				      $(data).insertAfter(".blog-item:first-of-type");
+					  $("#message").val("");
 					 },
 			error : function (xhr, ajaxOptions, thrownError){
 				alert(thrownError);
@@ -144,7 +145,7 @@ $("#ajouter").click(function ()
 			});
 			return false;
 			
-			s});
+			});
 
 
 
@@ -178,5 +179,37 @@ function loadData(count)
 
 	
 }
-
+function delete_service(rec_id)
+{
+	var service= $("#select_all").val();
+		 
+		// console.log(service);
+		  
+	  var sData={
+				"rec_id":rec_id
+			}
+		   $.ajax({
+			url: "includes/client_service.php",
+			type: "POST",
+			data: sData,
+			statutsCode: {
+				404 : function() {
+						$('.msg').text('not found page')
+					  }
+				},	
+			success: function(data, statutsText,xhr) {
+				    // alert(data);
+					var dom_elem="#re_"+rec_id;
+					var dom_op  ="#op_"+rec_id;
+					 $(dom_elem).remove();
+					  $(dom_op).remove();
+					 
+					 },
+			error : function (xhr, ajaxOptions, thrownError){
+				alert(thrownError);
+					}
+			});
+			return false;
+			
+}
 	
