@@ -133,7 +133,7 @@ $client_data=$client->find_by_id($session->get_user_id())
                                         </div>                        
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-primary btn-lg" required="required" id="envoyer">Envoyer</button> 
-                                            <select style="width:150px;height:25px; float:right;margin-top:17px;" >
+                                            <select style="width:150px;height:25px; float:right;margin-top:17px;" id="select">
                                            <?php 
 										   $services= $client->mes_services();
 										   foreach( $services as $service){

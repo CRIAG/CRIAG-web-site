@@ -39,14 +39,14 @@ if(isset($_POST["load"]))
                                         </a></span>
                                         <span><i class="fa fa-eye"></i>
                                         <a href="#">
-                                        <?php echo ($reclamation["vue"]==0)?"":"Non "  ?>
+                                        <?php echo (empty($reclamation["vue"]))?"":"Non "  ?>
                                         Vue
                                         </a></span>
                                     </div>
                         </div>
                                 <div class="col-xs-12 col-sm-10 blog-content">
                                     <p>
-                                    <?php echo escape($reclamation["re_text"]);?>
+                                    <?php echo nl2br(escape($reclamation["re_text"]));?>
                                     </p>
                                     <div class="post-tags">
                                         <strong>Service:</strong> <a href="#">
@@ -83,7 +83,7 @@ if(isset($_POST["load"]))
 								?>
                                 </h3>
                                 <h4><?php echo escape(date("F j, Y, g:i a",strtotime($cmt["cmt_date"])));?> </h4>
-                                <p><?php echo escape($cmt["cmt_text"])?></p>
+                                <p><?php echo nl2br(escape($cmt["cmt_text"]));?></p>
                             </div>
                         </div>
       <?php 
