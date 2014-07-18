@@ -69,8 +69,35 @@ $(document).ready(function() {
         }
     });
       ///load client data
-	  
-
+	  $("#envoyer").click(function ()
+       {
+		 var message =$("#message").val();
+		 var service= $("#select").val();
+		 
+		// console.log(service);
+		  
+	  var sData={
+				"message":message,
+				"service":service
+			}
+		   $.ajax({
+			url: "includes/envoyer.php",
+			type: "POST",
+			data: sData,
+			statutsCode: {
+				404 : function() {
+						$('.msg').text('not found page')
+					  }
+				},	
+			success: function(data, statutsText,xhr) {
+				      $(data).insertAfter(".blog-item:first-of-type");
+					 },
+			error : function (xhr, ajaxOptions, thrownError){
+				alert(thrownError);
+					}
+			});
+			return false;
+});
 
 
 
