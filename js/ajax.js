@@ -1,11 +1,12 @@
 // JavaScript Document
 var count =0;
 var show_ser=false;
+var show_param=false;
 $(document).ready(function() {
 	
 	loadData(count);
 	
-	
+	//show hide service
 	 $("#show_services").click(function(){
 		 if(!show_ser) 
 		 {
@@ -16,6 +17,20 @@ $(document).ready(function() {
 		 {
 			 show_ser=false;
 		    $("#all_services").hide();
+		 }
+		 return false;
+	 });
+	 //show hide client params
+	  $("#show_param").click(function(){
+		 if(!show_param) 
+		 {
+			 show_param=true;
+		    $("#parametre").show();
+		 }
+		 else
+		 {
+			 show_param=false;
+		    $("#parametre").hide();
 		 }
 		 return false;
 	 });
@@ -150,7 +165,52 @@ $("#ajouter").click(function ()
 			return false;
 			
 			});
-
+			
+//update client
+$("#enregistrer").click(function ()
+       {
+		 var nom=$("#nom").val();
+		 var prenom=$("#prenom").val();
+		 var email=$("#email").val();
+		 var password=$("#password").val();
+		 var password2=$("#password2").val();
+		 var adresse=$("#adresse").val();
+		 var tel=$("#tel").val();
+		 
+		//console.log(nom);
+		  
+	  var sData={
+		  "nom":nom,
+		  "prenom":prenom,
+		  "email":email,
+		  "password":password,
+		  "password2":password2,
+		  "adresse":adresse,
+		  "tel":tel
+			}
+		   $.ajax({
+			url: "includes/update.php",
+			type: "POST",
+			data: sData,
+			statutsCode: {
+				404 : function() {
+						$('#msg').text('not found page')
+					  }
+				},	
+			success: function(data, statutsText,xhr) {
+				     $('#msg').empty();
+					  $('#msg').append(data);
+					  
+					
+					 },
+			error : function (xhr, ajaxOptions, thrownError){
+				      $('#msg').empty();
+					  $('#msg').append(thrownError);
+					}
+			});
+			return false;
+			
+			});
 
 
 });

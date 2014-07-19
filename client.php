@@ -156,7 +156,7 @@ $client_data=$client->find_by_id($session->get_user_id())
                         <div class="row">
                             <div class="col-sm-6">
                                 <ul class="blog_category">
-                                    <li><a href="#">Paramètre </a></li>
+                                    <li><a href="#" id="show_param">Paramètre </a></li>
                                    
                                     <li><a href="#" id="show_services">Service proposer </a></li>
                                       <li><a href="includes/logout.php">Logout</a></li>
@@ -187,6 +187,38 @@ $client_data=$client->find_by_id($session->get_user_id())
                                             <button type="submit" id="ajouter">Ajouter</button> 
                                             
                                             </form>       
+                    </div>
+                  <!-- client parametres  -->  
+                    <div class="widget categories" style="padding-left:20px;display:none;" id="parametre">
+                    <div id="msg"></div>
+                      <form>
+                      <table width="100%" border="1">
+                    <tr>
+                      <td><input type="text" value="<?php echo escape($client_data["nom"] ); ?>" placeholder="Nom" id="nom"/></td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" value="<?php echo escape($client_data["prenom"] ); ?>" placeholder="Prenom" id="prenom"/></td>
+                    </tr>
+                    <tr>
+                      <td><input type="email" value="<?php echo escape($client_data["email"] ); ?>" placeholder="exemple@exemple.com" id="email"/></td>
+                    </tr>
+                    <tr>
+                      <td><input type="password" value="" placeholder="******" id="password"/></td>
+                    </tr>
+                    <tr>
+                      <td><input type="password" value="" placeholder="Confirmation" id="password2"/></td>
+                    </tr>
+                    <tr>
+                      <td><input type="tel" value="<?php echo escape($client_data["num_tel"] ); ?>" placeholder="06 00 00 00 00 " id="tel"/></td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" value="<?php echo escape($client_data["adresse"] ); ?>" placeholder="adresse..." id="adresse"/></td>
+                    </tr>
+                    <tr>
+                      <td><button  id="enregistrer">Enregistrer</button></td>
+                    </tr>
+                  </table>
+                  </form>
                     </div>
                                
     				
