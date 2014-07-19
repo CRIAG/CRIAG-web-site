@@ -159,7 +159,7 @@ $client_data=$client->find_by_id($session->get_user_id())
                                     <li><a href="#">Paramètre </a></li>
                                    
                                     <li><a href="#" id="show_services">Service proposer </a></li>
-                                      <li><a href="#">Logout</a></li>
+                                      <li><a href="includes/logout.php">Logout</a></li>
                                 </ul>
                             </div>
                         </div>                     
