@@ -72,13 +72,15 @@ if(isset($_POST["load"]))
    ?>
                         <div class="media comment_section">
                             <div class="pull-left post_comments">
-                                <a href="#"><img src="images/blog/girl.png" class="img-circle" alt="" /></a>
+                            <?php 
+							    $admin=new Admin();
+								$admin_data= $admin->find_by_id($cmt["admin_utilisateur_u_id"]);
+							?>
+                                <a href="#"><img src="https://chart.googleapis.com/chart?chs=100x100&cht=qr&chl=<?php escape($admin_data["nom"])." ".escape($admin_data["prenom"]);  ?>&choe=UTF-8" class="img-circle" alt="" /></a>
                             </div>
                             <div class="media-body post_reply_comments">
                                 <h3>
                                 <?php 
-								$admin=new Admin();
-								$admin_data= $admin->find_by_id($cmt["admin_utilisateur_u_id"]);
 								echo escape(ucwords($admin_data["nom"]))." ".escape(ucwords($admin_data["prenom"]))
 								?>
                                 </h3>
