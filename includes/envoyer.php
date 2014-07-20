@@ -72,7 +72,7 @@ if(isset($_POST["message"]) && isset($_POST["service"]))
 	<?php
 }else
 {
-header('HTTP/1.1 500 , ther is no post request');
+header('HTTP/1.1 500 , there is no post request');
 	    exit();	
 }
 
