@@ -37,7 +37,7 @@ require_once("database.php");
 			$sql .= " (" . implode(",",array_keys($this->commentaire)) . ")";
 			$sql .= " values(:".implode(", :",array_keys($this->commentaire)) . ");";
 			//echo $sql;
-			echo "<pre>";
+			
 			$re = $db->query($sql, $this->commentaire);
 
 			if($db->affected_rows($re) > 0)

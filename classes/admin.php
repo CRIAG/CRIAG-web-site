@@ -123,6 +123,39 @@ class Admin extends Utilisateur {
 			}
 		}
 	
+	public function mes_services()
+	{
+		global $db;
+
+			$sql = "SELECT service.svc_id,service.svc_nom,service.svc_type
+					FROM service inner join  est_responsable on est_responsable.service_svc_id=service.svc_id
+					where admin_utilisateur_u_id=:id;";	
+							   
+		    $list = array();
+			$re = $db->query($sql,array("id"=>$this->utilisateur["u_id"]));
+			$list = $re->fetchAll(PDO::FETCH_ASSOC);
+			
+			return $list;
+	
+	}	
+		
+	
+	public function mes_reclamations($id)
+	{
+		global $db;
+
+			$sql = " SELECT *
+				    FROM reclamation  where service_id=:id
+					order by re_id desc;";	
+		   
+		    $list = array();
+			$re = $db->query($sql,array("id"=>$id));
+			$list = $re->fetchAll(PDO::FETCH_ASSOC);
+			
+			return $list;
+	
+	}
+	
 	
 	
 	}
