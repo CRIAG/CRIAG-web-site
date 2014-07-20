@@ -165,12 +165,12 @@ $client_data=$client->find_by_id($session->get_user_id())
                         </div>                     
                     </div><!--/.categories-->
     					        <div class="widget categories" style="padding-left:20px;display:none" id="all_services">
-                                 <table border="1" id="tab">
+                                 <table border="1" id="tab" class="table table-striped table-bordered table-condensed">
                                          <?php foreach( $services as $service){
 		 echo '<tr id="re_'.escape($service["svc_id"]).'">
 		 <td>'.escape($service["svc_nom"]).'</td>
 		 <td>'.escape($service["svc_type"]).'</td>
-		 <td><button  onClick="return delete_service('.escape($service["svc_id"]).');" >supprimer</button></td>
+		 <td><button  onClick="return delete_service('.escape($service["svc_id"]).');" class="btn btn-default">supprimer</button></td>
 		 </tr>';
                                              } ?>  
                                          
@@ -184,7 +184,7 @@ $client_data=$client->find_by_id($session->get_user_id())
 										      echo '<option value="'.$svc["svc_id"].'">'.escape($svc["svc_nom"]).'</option>';
                                              } ?>
                                             </select> 
-                                            <button type="submit" id="ajouter">Ajouter</button> 
+                                            <button type="submit" id="ajouter"  class="btn btn-default">Ajouter</button> 
                                             
                                             </form>       
                     </div>
@@ -192,7 +192,7 @@ $client_data=$client->find_by_id($session->get_user_id())
                     <div class="widget categories" style="padding-left:20px;display:none;" id="parametre">
                     <div id="msg"></div>
                       <form>
-                      <table width="100%" border="1">
+                      <table class="table table-striped table-bordered table-condensed" >
                     <tr>
                       <td><input type="text" value="<?php echo escape($client_data["nom"] ); ?>" placeholder="Nom" id="nom"/></td>
                     </tr>
@@ -215,7 +215,7 @@ $client_data=$client->find_by_id($session->get_user_id())
                       <td><input type="text" value="<?php echo escape($client_data["adresse"] ); ?>" placeholder="adresse..." id="adresse"/></td>
                     </tr>
                     <tr>
-                      <td><button  id="enregistrer">Enregistrer</button></td>
+                      <td><button  id="enregistrer" class="btn btn-default">Enregistrer</button></td>
                     </tr>
                   </table>
                   </form>
