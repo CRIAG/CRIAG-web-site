@@ -34,7 +34,7 @@ if( isset($_POST["service"]))
 	echo '<tr id="re_'.escape($data["svc_id"]).'">
 		 <td>'.escape($data["svc_nom"]).'</td>
 		 <td>'.escape($data["svc_type"]).'</td>
-		 <td><button onClick="return delete_service('.escape($data["svc_id"]).');" >supprimer</button></td>
+		 <td><button onClick="return delete_service('.escape($data["svc_id"]).');" class="btn btn-default">supprimer</button></td>
 		 </tr>';
 	
 	
