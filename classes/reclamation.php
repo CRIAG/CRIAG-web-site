@@ -50,14 +50,14 @@ require_once("database.php");
 			}
 		
 		}
-		public function delete(){
+		public function delete($cl_id){
 			global $db;
 			$sql = "set foreign_key_checks = 0;";
 			$db->query($sql);
 			
 			$sql = " DELETE FROM " .self::$_table;
-			$sql .= " WHERE re_id=:id;"; 
-			$re = $db->query($sql, array("id"=>$this->reclamation["re_id"]));
+			$sql .= " WHERE re_id=:id and client_utilisateur_u_id=:cl_id;"; 
+			$re = $db->query($sql, array("id"=>$this->reclamation["re_id"],"cl_id"=>$cl_id));
 
 			if($db->affected_rows($re) > 0)
 			{

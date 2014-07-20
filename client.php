@@ -127,7 +127,7 @@ $client_data=$client->find_by_id($session->get_user_id())
                       <div class="row" style="padding-left:15px;">
                         <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
                                 <div class="row">
-                                  <div class="col-sm-7">                        
+                                  <div class="col-sm-7">                        <div><?php echo $session->message();    ?></div>
                                       <div class="form-group">
                                             <label>Reclamation:</label>
                                             <textarea name="message" id="message" required class="form-control" rows="8" style="50px;border:rgba(0,0,0,1) solid 1px;width:650px"></textarea>

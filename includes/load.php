@@ -56,6 +56,7 @@ if(isset($_POST["load"]))
 											echo escape($sdata["svc_nom"]);
 										?>
                                         </a>
+                                        <p style="float:right"><a href="includes/delete.php?re_id=<?php echo $reclamation["re_id"];  ?> "onclick="return confirmation();">supp</a></p>
                                     </div>
                                 </div>
                       </div>

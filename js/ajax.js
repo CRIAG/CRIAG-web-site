@@ -276,4 +276,8 @@ function delete_service(rec_id)
 			return false;
 			
 }
-	
+	function confirmation()
+	{
+	  var r=confirm('vous êtes sure?');
+	  if(r==false) return false;	
+	}
