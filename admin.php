@@ -157,7 +157,7 @@ $admin_data=$admin->find_by_id($session->get_user_id());
                                          
                                 </table> 
                                 <form>       
-                                <input type="text" id="nom" placeholder="Nom" />
+                                <input type="text" id="nom_svc" placeholder="Nom" />
                                 <input type="text" id="type" placeholder="Type" /><br>
                                             <button type="submit" id="ajouter"  class="btn btn-default">Ajouter</button> 
                                             

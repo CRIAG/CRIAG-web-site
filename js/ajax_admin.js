@@ -83,7 +83,7 @@ $("#enregistrer").click(function ()
 			//choit de service par client
 $("#ajouter").click(function ()
        {
-		 var nom= $("#nom").val();
+		 var nom= $("#nom_svc").val();
 		 var type= $("#type").val();
 		 
 		// console.log(service);
