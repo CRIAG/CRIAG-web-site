@@ -17,9 +17,9 @@ $admin_data=$admin->find_by_id($session->get_user_id());
 
 if(isset($_POST["load"]))
 {
-	$svs=$admin->mes_services();
-foreach($svs as $sv){	
-	$reclamations=$admin->mes_reclamations($sv["svc_id"]);
+	
+	
+	$reclamations=$admin->mes_reclamations();
 	foreach($reclamations as $reclamation){
 		//set vue for reclamation
 		if($reclamation["vue"]==0)
@@ -53,7 +53,6 @@ foreach($svs as $sv){
                                         </a></span>
                                         <span><i class="fa fa-eye"></i>
                                         <a href="#">
-                                        <?php echo (empty($reclamation["vue"]))?"":"Non "  ?>
                                         Vue
                                         </a></span>
                                     </div>
@@ -66,7 +65,7 @@ foreach($svs as $sv){
                                         <strong>Service:</strong> <a href="#">
                                         <?php
 											
-											echo escape($sv["svc_nom"]);
+											echo escape($reclamation["svc_nom"]);
 										?>
                                         </a>
                                        
@@ -114,7 +113,7 @@ foreach($svs as $sv){
 	  ?>                
 		
 <?php		
-	}
+	
 }else
 {
 header('HTTP/1.1 500 Error occurred, there is no post request');

@@ -140,16 +140,18 @@ class Admin extends Utilisateur {
 	}	
 		
 	
-	public function mes_reclamations($id)
+	public function mes_reclamations()
 	{
 		global $db;
 
-			$sql = " SELECT *
-				    FROM reclamation  where service_id=:id
-					order by re_id desc;";	
+			$sql = " select * from
+					(SELECT service.svc_id,service.svc_nom,service.svc_type
+					FROM service inner join  est_responsable on est_responsable.service_svc_id=service.svc_id
+					where admin_utilisateur_u_id=:id) ser inner join reclamation on reclamation.service_id=ser.svc_id
+					order by reclamation.re_id desc";	
 		   
 		    $list = array();
-			$re = $db->query($sql,array("id"=>$id));
+			$re = $db->query($sql,array("id"=>$this->utilisateur["u_id"]));
 			$list = $re->fetchAll(PDO::FETCH_ASSOC);
 			
 			return $list;
