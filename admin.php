@@ -143,25 +143,21 @@ $admin_data=$admin->find_by_id($session->get_user_id());
                         </div>                     
                     </div><!--/.categories-->
     					        <div class="widget categories" style="padding-left:20px;display:none" id="all_services">
-                                 <table border="1" id="tab">
-                                         <?php foreach( $services as $service){
+                                 <table border="1" id="tab" class="table table-striped table-bordered table-condensed">
+                                         <?php
+										 $services =$admin->mes_services();
+										  foreach( $services as $service){
 		 echo '<tr id="re_'.escape($service["svc_id"]).'">
 		 <td>'.escape($service["svc_nom"]).'</td>
 		 <td>'.escape($service["svc_type"]).'</td>
-		 <td><button  onClick="return delete_service('.escape($service["svc_id"]).');" >supprimer</button></td>
+		 <td><button  onClick="return delete_service('.escape($service["svc_id"]).');" class="btn btn-default">supprimer</button></td>
 		 </tr>';
                                              } ?>  
                                          
                                 </table> 
                                 <form>       
-                                <select  id="select_all">
-                                           <?php 
-										   $svcs=Service::services();
-										   
-										   foreach( $svcs as $svc){
-										      echo '<option value="'.$svc["svc_id"].'">'.escape($svc["svc_nom"]).'</option>';
-                                             } ?>
-                                            </select> 
+                                <input type="text" id="nom" placeholder="Nom" />
+                                <input type="text" id="type" placeholder="Type" /><br>
                                             <button type="submit" id="ajouter"  class="btn btn-default">Ajouter</button> 
                                             
                                             </form>       

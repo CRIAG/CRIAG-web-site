@@ -158,6 +158,34 @@ class Admin extends Utilisateur {
 	
 	}
 	
-	
+	public function est_responsable($svc_id)
+		{
+			global $db;
+			$sql= "insert into est_responsable values(:admin_id,:svc_id);";
+			$re = $db->query($sql, array("admin_id"=>$this->utilisateur["u_id"],"svc_id"=>$svc_id));
+			if($db->affected_rows($re)>0)
+			{
+				
+				return true;
+			}else
+			{
+			  return   false;
+			}
+		}
+		
+		 public function delete_est_responsable($svc_id)
+		{
+			global $db;
+			$sql= "delete from  est_responsable where admin_utilisateur_u_id=:admin_id and service_svc_id=:svc_id;";
+			$re = $db->query($sql, array("admin_id"=>$this->utilisateur["u_id"],"svc_id"=>$svc_id));
+			if($db->affected_rows($re)>0)
+			{
+				
+				return true;
+			}else
+			{
+			  return   false;
+			}
+		}
 	
 	}

@@ -25,7 +25,7 @@ if( isset($_POST["service"]))
 	
 	if(!$client->beneficier($_POST['service']))
 	{
-		header('HTTP/1.1 500 , problem de la BD ressayer');
+		header('HTTP/1.1 500 , probleme de la BD ressayer');
 	    exit();
 	}
 	$service= new Service();
