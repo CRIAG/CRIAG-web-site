@@ -21,6 +21,16 @@ if(isset($_POST["load"]))
 foreach($svs as $sv){	
 	$reclamations=$admin->mes_reclamations($sv["svc_id"]);
 	foreach($reclamations as $reclamation){
+		//set vue for reclamation
+		if($reclamation["vue"]==0)
+		{
+		$rec=new Reclamation();
+		$rec->find_by_id($reclamation["re_id"]);
+		$rec->set_reclamation("vue",1)	;
+		$rec->update();
+		}
+		
+		
 		$client=new Client();
 		$client_data=$client->find_by_id($reclamation["client_utilisateur_u_id"]);
 		

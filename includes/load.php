@@ -39,7 +39,7 @@ if(isset($_POST["load"]))
                                         </a></span>
                                         <span><i class="fa fa-eye"></i>
                                         <a href="#">
-                                        <?php echo (empty($reclamation["vue"]))?"":"Non "  ?>
+                                        <?php echo ($reclamation["vue"]==1)?"":"Non "  ?>
                                         Vue
                                         </a></span>
                                     </div>
