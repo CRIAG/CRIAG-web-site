@@ -124,6 +124,7 @@ $admin_data=$admin->find_by_id($session->get_user_id());
       <div class="blog">
           <div class="row">
             <div class="col-md-8">
+            <div><?php echo $session->message(); ?></div>
             <!--/.blog-item-->
             </div><!--/.col-md-8-->
 

@@ -95,6 +95,7 @@ if(isset($_POST["load"]))
                                 </h3>
                                 <h4><?php echo escape(date("F j, Y, g:i a",strtotime($cmt["cmt_date"])));?> </h4>
                                 <p><?php echo nl2br(escape($cmt["cmt_text"]));?></p>
+                                 <a href="includes/delete_cmt.php?cmt_id=<?php  echo  escape($cmt["cmt_id"]);  ?>" onclick="return confirmation()">Supp</a>
                             </div>
                         </div>
       <?php 
