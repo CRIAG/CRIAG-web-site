@@ -79,6 +79,40 @@ $("#enregistrer").click(function ()
 			return false;
 			
 			});
+			
+			//choit de service par client
+$("#ajouter").click(function ()
+       {
+		 var nom= $("#nom").val();
+		 var type= $("#type").val();
+		 
+		// console.log(service);
+		  
+	  var sData={
+				"nom":nom,
+				"type":type
+			}
+		   $.ajax({
+			url: "includes/admin_service.php",
+			type: "POST",
+			data: sData,
+			statutsCode: {
+				404 : function() {
+						alert('not found page')
+					  }
+				},	
+			success: function(data, statutsText,xhr) {
+				      $("#tab").append(data);
+					 },
+			error : function (xhr, ajaxOptions, thrownError){
+				alert(thrownError);
+					}
+			});
+			return false;
+			
+			});
+			
+
 
 
 
@@ -149,3 +183,44 @@ function addCmt(id)
 			return false;
 	
 }
+
+//delete service client
+function delete_service(svc_id)
+{
+	
+		 
+		// console.log(service);
+		  
+	  var sData={
+				"svc_id":svc_id
+			}
+		   $.ajax({
+			url: "includes/admin_service.php",
+			type: "POST",
+			data: sData,
+			statutsCode: {
+				404 : function() {
+						$('.msg').text('not found page')
+					  }
+				},	
+			success: function(data, statutsText,xhr) {
+				    // alert(data);
+					var dom_elem="#re_"+svc_id;
+					
+					 $(dom_elem).remove();
+					  
+					 
+					 },
+			error : function (xhr, ajaxOptions, thrownError){
+				alert(thrownError);
+					}
+			});
+			return false;
+			
+}
+
+function confirmation()
+	{
+	  var r=confirm('vous êtes sure?');
+	  if(r==false) return false;	
+	}
