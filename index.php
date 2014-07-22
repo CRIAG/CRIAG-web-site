@@ -93,11 +93,13 @@
 						echo ' <li><a href="includes/logout.php">logout</a></li>';
 						}else if($session->is_logedin() && !$session->is_client())
 						{
-						echo ' <li><a href="client.php">Client</a></li>';
+						echo ' <li><a href="admin.php">Admin</a></li>';
 						echo ' <li><a href="includes/logout.php">logout</a></li>';
 						}else
 						{
-						echo '<li> <a href="#" id="loginbt">Login</a></li>';	
+						echo '<li> <a href="#" id="loginbt">Login</a></li>';
+						echo '<li> <a href="formulaire.php">Inscription</a></li>';
+							
 						}
 						  ?>
                           
@@ -394,6 +396,72 @@
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
-    <script src="js/ajax.js"></script>
+    <script >
+         $("#loginbt").click(function(){
+		 popup();
+	 });
+
+    function popup() {
+        $("#logindiv").css("display", "block");
+    }
+
+    $("#login #cancel").click(function() {
+        $(this).parent().parent().hide();
+    });
+
+    $("#onclick").click(function() {
+        $("#contactdiv").css("display", "block");
+    });
+
+    $("#contact #cancel").click(function() {
+        $(this).parent().parent().hide();
+    });
+
+//login form popup login-button click event
+    $("#loginbtn").click(function() {
+        var email = $("#email").val();
+        var password = $("#password").val();
+		console.log(password);
+        if (email == "" || password == "")
+        {
+            alert("email or Password was Wrong");
+        }
+        else
+        {
+			var sData={
+				"email":email,
+				"password":password
+			}
+			console.log(email);
+			
+			
+           // $("#logindiv").css("display", "none");
+		   $.ajax({
+			url: "includes/login.php",
+			type: "POST",
+			data: sData,
+			statutsCode: {
+				404 : function() {
+						$('.msg').text('not found page')
+					  }
+				},	
+			success: function(data, statutsText,xhr) {
+				if(data.toString()=="client"){
+					window.location.replace("client.php");
+				}else{
+					window.location.replace("admin.php");
+				}
+						
+					 },
+			error : function (xhr, ajaxOptions, thrownError){
+				alert(thrownError);
+					}
+			});
+			return false;
+		
+        }
+    });
+
+    </script>
 </body>
 </html>
