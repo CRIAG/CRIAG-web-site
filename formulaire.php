@@ -1,6 +1,10 @@
 <?php
 require_once("classes/session.php");
 $session = new Session();	
+	if($session->is_logedin() && $session->is_client())
+	{
+	      header('Location:client.php');
+	}
 
 ?>
 <!DOCTYPE html>
@@ -134,7 +138,7 @@ $session = new Session();
                         </div>
                         <div class="form-group">
                             <label>Numero de téléphone </label>
-                            <input type="number" name="num" class="form-control">
+                            <input type="tel" name="tel" class="form-control">
                         </div>
                                <div class="form-group">
                             <input type="submit"  required="required"/>
