@@ -141,7 +141,7 @@ $session = new Session();
                             <input type="tel" name="tel" class="form-control">
                         </div>
                                <div class="form-group">
-                            <input type="submit"  required="required"/>
+                            <input type="submit"  required="required" class="btn btn-default"/>
                         </div>                
                     </div>
                 </form> 
