@@ -17,7 +17,8 @@ $client_data=$client->find_by_id($session->get_user_id());
 
 if(isset($_POST["load"]))
 {
-	$reclamations=$client->mes_reclamations();
+	$ofsset=$_POST["load"]*10;
+	$reclamations=$client->mes_reclamations($ofsset);
 	
 	foreach($reclamations as $reclamation){
 ?>

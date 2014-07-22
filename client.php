@@ -229,8 +229,7 @@ $client_data=$client->find_by_id($session->get_user_id())
       </div><!--/.blog-->
 
     </section><!--/#blog-->
-
-
+<button id="load_more" class="btn btn-primary btn-lg" style="width:100%;">Plus...</button>
     <section id="bottom">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
             <div class="row">

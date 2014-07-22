@@ -2,6 +2,7 @@
 var count =0;
 var show_ser=false;
 var show_param=false;
+
 $(document).ready(function() {
 	
 	loadData(count);
@@ -149,13 +150,13 @@ $("#ajouter").click(function ()
 			data: sData,
 			statutsCode: {
 				404 : function() {
-						$('.msg').text('not found page')
+						$('.msg').text('not found page');
 					  }
 				},	
 			success: function(data, statutsText,xhr) {
 				      $("#tab").append(data);
 					  var string ='<option value="'+service+'" id="op_'+service+'">'+nom+'</option>';
-					 console.log(string);
+					// console.log(string);
 					 $("#select").append(string);
 					 },
 			error : function (xhr, ajaxOptions, thrownError){
@@ -211,6 +212,14 @@ $("#enregistrer").click(function ()
 			return false;
 			
 			});
+			
+			///load more data
+			$("#load_more").click(function(){
+				count++;
+				loadData(count);
+				return false;
+				
+				});
 
 
 });
@@ -232,6 +241,12 @@ function loadData(count)
 			success: function(data, statutsText,xhr) {
 				    //alert(data)
 					//$(data).insertAfter(".blog-item:last-of-type");
+					if(data.trim()=="") 
+					{
+						data='<div>Il ne reste plus des données</div>';
+						$("#load_more").hide();
+						
+					}
 					$(".col-md-8").append(data);
 						
 					 },

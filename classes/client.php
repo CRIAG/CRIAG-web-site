@@ -169,14 +169,15 @@ class Client extends Utilisateur {
 	
 	}
 	
-	public function mes_reclamations()
+	public function mes_reclamations($offset=0)
 	{
 		global $db;
 
 			$sql = " SELECT *
 				    FROM reclamation  where client_utilisateur_u_id=:id
-					order by re_id desc;";	
-		   
+					order by re_id desc
+					limit ".(int)trim($offset).",10;";	
+		 
 		    $list = array();
 			$re = $db->query($sql,array("id"=>$this->utilisateur["u_id"]));
 			$list = $re->fetchAll(PDO::FETCH_ASSOC);
