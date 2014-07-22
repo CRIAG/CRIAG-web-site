@@ -137,7 +137,8 @@ $admin_data=$admin->find_by_id($session->get_user_id());
                                 <ul class="blog_category">
                                     <li><a href="#" id="show_param">Paramètre </a></li>
                                    
-                                    <li><a href="#" id="show_services">Service proposer </a></li>
+                                    <li><a href="#" id="show_services">Mes Services  </a></li>
+                                    <li><a href="formulaire.php" >Ajouter un admin </a></li>
                                       <li><a href="includes/logout.php">Logout</a></li>
                                 </ul>
                             </div>

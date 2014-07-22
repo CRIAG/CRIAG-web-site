@@ -11,6 +11,7 @@ require_once("../classes/client.php");
 require_once("../classes/admin.php");
 require_once("../classes/service.php");
 require_once("../includes/functions.php");
+require_once("../includes/lib/password.php");
 
 
 	if(isset($_POST) && $session->is_client())
@@ -45,7 +46,7 @@ $client_data=$client->find_by_id($session->get_user_id());
 	$client->set_utilisateur("nom",$nom);
 	$client->set_utilisateur("prenom",$prenom);
 	$client->set_utilisateur("email",$email);
-	$client->set_utilisateur("password",$password);
+	$client->set_utilisateur("password",password_hash($password, PASSWORD_BCRYPT));
 	$client->set_utilisateur("adresse",$_POST["adresse"]);
 	$client->set_utilisateur("num_tel",$_POST["tel"]);
 	if(!$client->update()){
@@ -87,7 +88,7 @@ $client_data=$client->find_by_id($session->get_user_id());
 	$admin->set_utilisateur("nom",$nom);
 	$admin->set_utilisateur("prenom",$prenom);
 	$admin->set_utilisateur("email",$email);
-	$admin->set_utilisateur("password",$password);
+	$admin->set_utilisateur("password",password_hash($password, PASSWORD_BCRYPT));
 	$admin->set_utilisateur("adresse",$_POST["adresse"]);
 	$admin->set_utilisateur("num_tel",$_POST["tel"]);
 	if(!$admin->update()){
