@@ -140,7 +140,7 @@ class Admin extends Utilisateur {
 	}	
 		
 	
-	public function mes_reclamations()
+	public function mes_reclamations($offset)
 	{
 		global $db;
 
@@ -148,7 +148,8 @@ class Admin extends Utilisateur {
 					(SELECT service.svc_id,service.svc_nom,service.svc_type
 					FROM service inner join  est_responsable on est_responsable.service_svc_id=service.svc_id
 					where admin_utilisateur_u_id=:id) ser inner join reclamation on reclamation.service_id=ser.svc_id
-					order by reclamation.re_id desc";	
+					order by reclamation.re_id desc
+					limit ".(int)trim($offset).",10;";	
 		   
 		    $list = array();
 			$re = $db->query($sql,array("id"=>$this->utilisateur["u_id"]));

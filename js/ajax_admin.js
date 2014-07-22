@@ -113,7 +113,13 @@ $("#ajouter").click(function ()
 			});
 			
 
-
+///load more data
+			$("#load_more").click(function(){
+				count++;
+				loadData(count);
+				return false;
+				
+				});
 
 
 	
@@ -137,6 +143,14 @@ function loadData(count)
 			success: function(data, statutsText,xhr) {
 				    //alert(data)
 					//$(data).insertAfter(".blog-item:last-of-type");
+					
+					if(data.trim()=="") 
+					{
+						
+						data='<div>Il ne reste plus des données</div>';
+						$("#load_more").hide();
+						
+					}
 					$(".col-md-8").append(data);
 						
 					 },

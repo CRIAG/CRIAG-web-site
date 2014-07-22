@@ -18,8 +18,9 @@ $admin_data=$admin->find_by_id($session->get_user_id());
 if(isset($_POST["load"]))
 {
 	
+	$ofsset=$_POST["load"]*10;
 	
-	$reclamations=$admin->mes_reclamations();
+	$reclamations=$admin->mes_reclamations($ofsset);
 	foreach($reclamations as $reclamation){
 		//set vue for reclamation
 		if($reclamation["vue"]==0)
@@ -111,8 +112,7 @@ if(isset($_POST["load"]))
       
       <?php
 	}
-	  ?>                
-		
+	  ?> 	
 <?php		
 	
 }else
