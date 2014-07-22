@@ -128,6 +128,7 @@ $("#ajouter").click(function ()
 
 function loadData(count)
 {
+	$("#loader").show();
 	var sData={
 				"load":count
 			}
@@ -146,12 +147,13 @@ function loadData(count)
 					
 					if(data.trim()=="") 
 					{
-						
+						$("#loader").hide();
 						data='<div>Il ne reste plus des données</div>';
 						$("#load_more").hide();
 						
 					}
 					$(".col-md-8").append(data);
+					$("#loader").hide();
 						
 					 },
 			error : function (xhr, ajaxOptions, thrownError){

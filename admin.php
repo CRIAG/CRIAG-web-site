@@ -204,6 +204,7 @@ $admin_data=$admin->find_by_id($session->get_user_id());
       </div><!--/.blog-->
 
     </section><!--/#blog-->
+     <img src="images/load.GIF" style="margin-left:45%;display:none;" id="loader" />
 <button id="load_more" class="btn btn-primary btn-lg" style="width:100%;">Plus...</button>
 
     <section id="bottom">

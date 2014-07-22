@@ -3,6 +3,7 @@ var count =0;
 var show_ser=false;
 var show_param=false;
 
+
 $(document).ready(function() {
 	
 	loadData(count);
@@ -226,6 +227,7 @@ $("#enregistrer").click(function ()
 
 function loadData(count)
 {
+	$("#loader").show();
 	var sData={
 				"load":count
 			}
@@ -241,6 +243,7 @@ function loadData(count)
 			success: function(data, statutsText,xhr) {
 				    //alert(data)
 					//$(data).insertAfter(".blog-item:last-of-type");
+					$("#loader").hide();
 					if(data.trim()=="") 
 					{
 						data='<div>Il ne reste plus des données</div>';
@@ -252,6 +255,7 @@ function loadData(count)
 					 },
 			error : function (xhr, ajaxOptions, thrownError){
 				alert(thrownError);
+				$("#loader").hide();
 					}
 			});
 			return false;
