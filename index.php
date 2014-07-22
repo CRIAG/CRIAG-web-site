@@ -85,8 +85,24 @@
                             </ul>
                         </li> 
                         <li><a href="contact-us.html">Contact</a></li> 
-                       <li> <a href="#" id="loginbt">Login</a></li>
-                       <li><a href="includes/logout.php">logout</a></li>
+                        <?php 
+						require_once("classes/session.php");
+						$session =new   Session();
+						if($session->is_logedin() && $session->is_client()){
+						echo ' <li><a href="client.php">Client</a></li>';
+						echo ' <li><a href="includes/logout.php">logout</a></li>';
+						}else if($session->is_logedin() && !$session->is_client())
+						{
+						echo ' <li><a href="client.php">Client</a></li>';
+						echo ' <li><a href="includes/logout.php">logout</a></li>';
+						}else
+						{
+						echo '<li> <a href="#" id="loginbt">Login</a></li>';	
+						}
+						  ?>
+                          
+                       
+                      
                        
                     </ul>
                 </div>
