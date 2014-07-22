@@ -6,6 +6,6 @@ if($session->is_logedin() ){
 	
 	$session->logout();
 	$session->message(" vous etes deconnecté ");
- header("location:../index.html");
+ header("location:../index.php");
 }
 ?>

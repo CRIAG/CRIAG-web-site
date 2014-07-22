@@ -13,7 +13,7 @@ $session = new Session();
 		
 	
 	
-	if(!isset($_POST)) { header("location:../index.html"); }
+	if(!isset($_POST)) { header("location:../index.php"); }
 	
 	$nom= trim($_POST["nom"]);
 	$prenom= trim($_POST["prenom"]);
