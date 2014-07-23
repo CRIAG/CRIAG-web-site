@@ -75,15 +75,7 @@
                         
                         </li>
                         <li><a href="methodologie.html">Méthodologie</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="client.php">Blog Single</a></li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="404.html">404</a></li>
-                                <li><a href="shortcodes.html">Shortcodes</a></li>
-                            </ul>
-                        </li> 
+                       
                         <li><a href="contact-us.html">Contact</a></li> 
                         <?php 
 						require_once("classes/session.php");

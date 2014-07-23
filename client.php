@@ -95,14 +95,7 @@ $client_data=$client->find_by_id($session->get_user_id())
                         <li><a href="services.html">Services</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
                         <li class="dropdown active">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li class="active"><a href="client.php">Blog Single</a></li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="404.html">404</a></li>
-                                <li><a href="shortcodes.html">Shortcodes</a></li>
-                                </li>
-                            </ul>
+                         <li class="active"><a href="client.php">Client</a></li>
                         </li>
                         <li><a href="blog.html">Blog</a></li> 
                         <li><a href="contact-us.html">Contact</a></li>                        
