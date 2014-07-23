@@ -26,11 +26,7 @@ function reduce_name($name)
 		if (empty($resultat) && empty($resultat2)) {
 			return false;
 		} else {
-			if ($resultat) {
-				$GLOBALS['id'] = $resultat['u_id'];
-			} else {
-				$GLOBALS['id'] = $resultat['u_id'];
-			}
+			
 			return true;
 		}
 	}

@@ -4,7 +4,7 @@ $session = new Session();
 
 if(!$session->is_logedin() || $session->is_client()){
 	$session->message(" vous n'etes pas connecté ");
-	header("location:../index.html");
+	header("location:../index.php");
 }
 require_once("../classes/admin.php");
 require_once("../classes/reclamation.php");

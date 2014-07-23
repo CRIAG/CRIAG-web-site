@@ -1,6 +1,10 @@
 <?php
 require_once("classes/session.php");
 $session = new Session();	
+	if($session->is_logedin() && $session->is_client())
+	{
+	      header('Location:client.php');
+	}
 
 ?>
 <!DOCTYPE html>
@@ -70,12 +74,12 @@ $session = new Session();
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                    <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>
                 </div>
                 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="about-us.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
@@ -134,10 +138,10 @@ $session = new Session();
                         </div>
                         <div class="form-group">
                             <label>Numero de téléphone </label>
-                            <input type="number" name="num" class="form-control">
+                            <input type="tel" name="tel" class="form-control">
                         </div>
                                <div class="form-group">
-                            <input type="submit"  required="required"/>
+                            <input type="submit"  required="required" class="btn btn-default"/>
                         </div>                
                     </div>
                 </form> 

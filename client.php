@@ -4,7 +4,7 @@ $session = new Session();
 
 if(!$session->is_logedin() || !$session->is_client()){
 	$session->message(" vous n'etes pas connecté ");
-	header("location:index.html");
+	header("location:index.php");
 }
 require_once("classes/client.php");
 require_once("classes/service.php");
@@ -85,12 +85,12 @@ $client_data=$client->find_by_id($session->get_user_id())
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                    <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>
                 </div>
                 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="about-us.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>

@@ -23,6 +23,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <link href="css/jquery_popup.css" rel="stylesheet">
 </head><!--/head-->
 
 <body class="homepage">
@@ -103,7 +104,7 @@
             </ol>
             <div class="carousel-inner">
 
-                <div class="item active" style="background-image: url(images/slider/bg1.jpg)">
+                <div class="item active" style="background-image: url(images/slider/Complex-information-technology-e1381602357858.jpg)">
                     <div class="container">
                         <div class="row slide-margin">
                             <div class="col-sm-6">

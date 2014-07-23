@@ -1,6 +1,7 @@
 <?php
 require_once("database.php");
 require_once("utilisateur.php");
+require_once(__DIR__."/../includes/lib/password.php");
 class Admin extends Utilisateur {
 	
 	public function __construct()
@@ -113,7 +114,7 @@ class Admin extends Utilisateur {
 			$resultat = $re->fetch();
 			$resultat = $resultat['password'];
 
-			if($password==$resultat)
+			if(password_verify($password,$resultat))
 			{
 				$this->find_by_email($email);
 				return true;
