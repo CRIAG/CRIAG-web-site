@@ -41,6 +41,7 @@ if(empty($nom) || empty($prenom) ||empty($email)|| empty($password) ){
  	if (!preg_match("#^[A-Za-z0-9._-]+@[A-Za-z0-9._-]{2,}\.[A-Za-z]{2,4}$#", $email)) {
 	    $session->message('L\'adresse ' . $email . ' n\'est pas valide');
 	    header('Location:../formulaire.php');
+		exit();
 	  }
 
       if (strlen($_POST['password']) < 6) {
