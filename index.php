@@ -100,11 +100,11 @@
 						$session =new   Session();
 						if($session->is_logedin() && $session->is_client()){
 						echo ' <li><a href="client.php">Client</a></li>';
-						echo ' <li><a href="includes/logout.php">fa-sign-out</a></li>';
+						echo ' <li><a href="includes/logout.php"><i class="fa fa-sign-out" ></i></a></li>';
 						}else if($session->is_logedin() && !$session->is_client())
 						{
 						echo ' <li><a href="admin.php">Admin</a></li>';
-						echo ' <li><a href="includes/logout.php">fa-sign-out</a></li>';
+						echo ' <li><a href="includes/logout.php"><i class="fa fa-sign-out" ></i></a></li>';
 						}else
 						{
 						echo '<li> <a href="#" id="loginbt"><i class="fa fa-sign-in" style="size:30px;"></i></a></li>';
