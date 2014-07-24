@@ -33,7 +33,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-xs-4">
-                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  +212 5 39 37 38 39</p></div>
+                        <div class="top-number">
+                          <p><i class="fa fa-phone-square"></i>  +212 5 39 93 38 39</p></div>
                     </div>
                     <div class="col-sm-6 col-xs-8">
                        <div class="social">
@@ -72,8 +73,9 @@
                                 <li><a href="nos_metiers.html#id">Réseaux & telecom</a></li>
                                 <li><a href="nos_metiers.html#id">Mobilier de bureau</a></li>
                             </ul>
-                        
-                        </li>
+
+
+                        </li>   
                         <li><a href="methodologie.html">Méthodologie</a></li>
                        
                         <li><a href="contact-us.html">Contact</a></li> 
