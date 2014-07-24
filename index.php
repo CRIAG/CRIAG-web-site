@@ -67,18 +67,34 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.php">Accueil</a></li>
                         <li><a href="le_groupe.html">Le groupe</a></li>
-                        <li class="dropdown"><a href="nos_metiers.html" class="dropdown-toggle" data-toggle="dropdown">Intégrateur de solutions <i class="fa fa-angle-down"></i></a>
+                        <li class="dropdown"><a href="nos_metiers.html" class="dropdown-toggle" data-toggle="dropdown">Solutions de gestion<i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
-                                <li><a href="nos_metiers.html#id">Gestion </a></li>
-                                <li><a href="nos_metiers.html#id">Réseaux & telecom</a></li>
-                                <li><a href="nos_metiers.html#id">Mobilier de bureau</a></li>
+            
+      
+                             
+                               <li><a href="ERP.html#id">ERP sage </a></li>
+                                <li><a href="Logiciel_CRIAG.html#id">Logiciel Criag</a></li>
+                                                               <li><a href="Gestimum.html#id">Gestimum</a></li>
+                                                                                              <li><a href="methodologie_gestion.html#id">Méthodologie</a></li>
                             </ul>
 
+                        </li> <li class="dropdown"><a href="nos_metiers.html" class="dropdown-toggle" data-toggle="dropdown">Solutions Réseaux<i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+            
+      
+                             
+                               <li><a href="nos_metiers.html#id">Caméra de surveillance </a></li>
+                                <li><a href="nos_metiers.html#id">Pointage et contrôle d'accés</a></li>
+                                                               
+                                                                                              <li><a href="nos_metiers.html#id">Méthodologie</a></li>
+                            </ul>
 
-                        </li>   
-                        <li><a href="methodologie.html">Méthodologie</a></li>
+                        </li>  
+    
+                             <li><a href="contact-us.html">Mobilier de bureau</a></li>              
                        
-                        <li><a href="contact-us.html">Contact</a></li> 
+                        <li><a href="contact-us.html">Contacts</a></li> 
+                        
                         <?php 
 						require_once("classes/session.php");
 						$session =new   Session();
