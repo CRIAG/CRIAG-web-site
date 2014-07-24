@@ -14,7 +14,7 @@ $session = new Session();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Blog Single | Corlate</title>
+    <title>Inscription | Corlate</title>
     
     <!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -76,24 +76,45 @@ $session = new Session();
                     </button>
                     <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>
                 </div>
-                
+				
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="client.php">Blog Single</a></li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="404.html">404</a></li>
-                                <li><a href="shortcodes.html">Shortcodes</a></li>
+                        <li ><a href="index.php">Accueil</a></li>
+                        <li><a href="le_groupe.html">Le groupe</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions de gestion<i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+            
+      
+                             
+                               <li><a href="ERP.html">ERP sage </a></li>
+                                <li><a href="Logiciel_CRIAG.html">Logiciel Criag</a></li>
+                                                               <li><a href="Gestimum.html">Gestimum</a></li>
+                                                                                              <li><a href="methodologie_gestion.html">Méthodologie</a></li>
                             </ul>
-                        </li>
-                        <li><a href="blog.html">Blog</a></li> 
-                        <li class="active"><a href="contact-us.html">Contact</a></li>                        
+
+                        </li> <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions Réseaux<i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+            
+      
+                             
+                               <li><a href="Camera_surveillance.html">Caméra de surveillance </a></li>
+                                <li><a href="Pointage_controle_d'acces.html">Pointage et contrôle d'accès</a></li>
+                                                               
+                                                                                              <li><a href="méthodologie_réseau.html">Méthodologie</a></li>
+                            </ul>
+
+                        </li>  
+    
+                             <li><a href="Agencement.html">Mobilier de bureau</a></li>              
+                       
+                        <li><a href="contact-us.html">Contact</a></li> 
+                        <li class="active"><a href="formulaire.php">Inscription</a></li> 
+                        
+                       
+                          
+                       
+                      
+                       
                     </ul>
                 </div>
             </div><!--/.container-->

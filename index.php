@@ -67,7 +67,7 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.php">Accueil</a></li>
                         <li><a href="le_groupe.html">Le groupe</a></li>
-                        <li class="dropdown"><a  class="dropdown-toggle" data-toggle="dropdown">Solutions de gestion<i class="fa fa-angle-down"></i></a>
+                        <li class="dropdown"><a  href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions de gestion<i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
             
       
@@ -78,7 +78,7 @@
                                                                                               <li><a href="methodologie_gestion.html">Méthodologie</a></li>
                             </ul>
 
-                        </li> <li class="dropdown"><a  class="dropdown-toggle" data-toggle="dropdown">Solutions Réseaux<i class="fa fa-angle-down"></i></a>
+                        </li> <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions Réseaux<i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
             
       

@@ -4,7 +4,7 @@ $session = new Session();
 
 if(!$session->is_logedin() || $session->is_client()){
 	$session->message(" vous n'etes pas connecté ");
-	header("location:index.php");
+	//header("location:index.php");
 }
 require_once("classes/client.php");
 require_once("classes/admin.php");
@@ -91,15 +91,44 @@ $admin_data=$admin->find_by_id($session->get_user_id());
                 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>         
-                                <li class="active"><a href="client.php">Admin</a></li>                              
-                        </li>
-                        <li><a href="blog.html">Blog</a></li> 
-                        <li><a href="contact-us.html">Contact</a></li>                        
-                        <li><a href="includes/logout.php" id="loginbt">logout</a>
+                               <li ><a href="index.php">Accueil</a></li>
+                        <li><a href="le_groupe.html">Le groupe</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions de gestion<i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+            
+      
+                             
+                               <li><a href="ERP.html">ERP sage </a></li>
+                                <li><a href="Logiciel_CRIAG.html">Logiciel Criag</a></li>
+                                                               <li><a href="Gestimum.html">Gestimum</a></li>
+                                                                                              <li><a href="methodologie_gestion.html">Méthodologie</a></li>
+                            </ul>
+
+                        </li> <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions Réseaux<i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+            
+      
+                             
+                               <li><a href="Camera_surveillance.html">Caméra de surveillance </a></li>
+                                <li><a href="Pointage_controle_d'acces.html">Pointage et contrôle d'accès</a></li>
+                                                               
+                                                                                              <li><a href="méthodologie_réseau.html">Méthodologie</a></li>
+                            </ul>
+
+                        </li>  
+    
+                             <li><a href="Agencement.html">Mobilier de bureau</a></li>              
+                       
+                     
+                       
+                         <li class="active"><a href="client.php">Admin</a></li>
+                        
+                        
+                                           
+                         
+                                                      
+                       <li><a href="includes/logout.php" id="loginbt">Logout</a>
+                        
                     </ul>
                 </div>
             </div><!--/.container-->
