@@ -5,6 +5,7 @@ $session = new Session();
 	if($session->is_logedin() && $session->is_client())
 	{
 	      header('Location: ../client.php');
+		  exit();
 	}
 
 	require_once('../classes/client.php');
@@ -13,7 +14,7 @@ $session = new Session();
 		
 	
 	
-	if(!isset($_POST)) { header("location:../index.php"); }
+	if(!isset($_POST)) { header("location:../index.php");  exit();}
 	
 	$nom= trim($_POST["nom"]);
 	$prenom= trim($_POST["prenom"]);
@@ -23,32 +24,35 @@ $session = new Session();
 if(empty($nom) || empty($prenom) ||empty($email)|| empty($password) ){
 	
   $session->message('Tous les champs avec * sont obligatoires.');
-	      header('Location: ../formulaire.php');
+	      header('Location:../formulaire.php');
+		   exit();
 	
 	
 	}
 
-	if(user_exists("ejjk1@gmail.com"))
+	if(user_exists($email))
 	{
 		 $session->message( "Email déjà utilisé");
-		header('Location: ../formulaire.php');
+		header('Location:../formulaire.php');
+		 exit();
 	}
 
 
  	if (!preg_match("#^[A-Za-z0-9._-]+@[A-Za-z0-9._-]{2,}\.[A-Za-z]{2,4}$#", $email)) {
 	    $session->message('L\'adresse ' . $email . ' n\'est pas valide');
-	    header('Location: ../formulaire.php');
+	    header('Location:../formulaire.php');
 	  }
 
       if (strlen($_POST['password']) < 6) {
 	    $session->message('Le mot de passe doit être de 6 caractères ou plus');
-	   header('Location: ../formulaire.php');
+	   header('Location:../formulaire.php');
+	    exit();
 	  }
 
 	  if ($_POST['password'] !== $_POST['password2']) {
 	    $session->message('Les mots de passe saisis ne sont pas identiques');
-	   
-	    header('Location: ../formulaire.php');
+	    header('Location:../formulaire.php');
+		 exit();
 	  }
 	if($session->is_logedin() && !$session->is_client())
 	$utilisateur=new Admin();
@@ -68,10 +72,12 @@ if(empty($nom) || empty($prenom) ||empty($email)|| empty($password) ){
 	{
 		 $session->message('Erreur lors de la creation ,ressayer');
 	    header('Location: ../formulaire.php');
+		 exit();
 	}
 	if($session->is_logedin() && !$session->is_client()){
 		$session->message('le compte est créé');
 	    header('Location: ../admin.php');
+		 exit();
 	}
 	
 	
