@@ -60,7 +60,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>
+                    <a class="navbar-brand" href="index.php"><img src="images/criag-logo.gif" alt="logo" ></a>
                 </div>
 				
                 <div class="collapse navbar-collapse navbar-right">
@@ -95,19 +95,19 @@
                        
                         <li><a href="contact-us.html">Contact</a></li> 
                         
-                        <?php 
+                       <?php 
 						require_once("classes/session.php");
 						$session =new   Session();
 						if($session->is_logedin() && $session->is_client()){
 						echo ' <li><a href="client.php">Client</a></li>';
-						echo ' <li><a href="includes/logout.php">logout</a></li>';
+						echo ' <li><a href="includes/logout.php">fa-sign-out</a></li>';
 						}else if($session->is_logedin() && !$session->is_client())
 						{
 						echo ' <li><a href="admin.php">Admin</a></li>';
-						echo ' <li><a href="includes/logout.php">logout</a></li>';
+						echo ' <li><a href="includes/logout.php">fa-sign-out</a></li>';
 						}else
 						{
-						echo '<li> <a href="#" id="loginbt">Login</a></li>';
+						echo '<li> <a href="#" id="loginbt"><i class="fa fa-sign-in" style="size:30px;"></i></a></li>';
 						echo '<li> <a href="formulaire.php">Inscription</a></li>';
 							
 						}
@@ -132,20 +132,20 @@
             </ol>
             <div class="carousel-inner">
 
-                <div class="item active" style="background-image: url(images/slider/Complex-information-technology-e1381602357858.jpg)">
+                <div class="item active" style="background-image: url(images/slider/img5.gif)">
                     <div class="container">
                         <div class="row slide-margin">
                             <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                <div class="carousel-content" >
+                                    <h1 class="animation animated-item-1" style="color:rgba(0,0,0,0.7)">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                    <h2 class="animation animated-item-2"  style="color:rgba(0,0,0,0.7)">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                    <a class="btn-slide animation animated-item-3" href="#">Plus...</a>
                                 </div>
                             </div>
 
                             <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
-                                    <img src="images/slider/img1.png" class="img-responsive">
+                                    <img src="images/slider/3LOGOS.png" class="img-responsive">
                                 </div>
                             </div>
 
@@ -153,40 +153,36 @@
                     </div>
                 </div><!--/.item-->
 
-                <div class="item" style="background-image: url(images/slider/bg2.jpg)">
+                <div class="item" style="background-image: url(images/slider/img1.gif)">
                     <div class="container">
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                    <h1 class="animation animated-item-1" style="color:rgba(0,0,0,0.7)">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                    <h2 class="animation animated-item-2" style="color:rgba(0,0,0,0.7)">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                    <a class="btn-slide animation animated-item-3" href="#">Plus...</a>
                                 </div>
                             </div>
 
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="images/slider/img2.png" class="img-responsive">
-                                </div>
-                            </div>
+                            
 
                         </div>
                     </div>
                 </div><!--/.item-->
 
-                <div class="item" style="background-image: url(images/slider/bg3.jpg)">
+                <div class="item" style="background-image: url(images/slider/img4.gif)">
                     <div class="container">
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                    <h1 class="animation animated-item-1" style="color:rgba(0,0,0,0.7)" >Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                    <h2 class="animation animated-item-2" style="color:rgba(0,0,0,0.7)">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                    <a class="btn-slide animation animated-item-3" href="#">plus...</a>
                                 </div>
                             </div>
                             <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
-                                    <img src="images/slider/img3.png" class="img-responsive">
+                                    <img src="images/slider/chaise4.gif" class="img-responsive">
                                 </div>
                             </div>
                         </div>
@@ -196,6 +192,7 @@
         </div><!--/.carousel-->
         <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
             <i class="fa fa-chevron-left"></i>
+
         </a>
         <a class="next hidden-xs" href="#main-slider" data-slide="next">
             <i class="fa fa-chevron-right"></i>
@@ -262,18 +259,24 @@
     <section id="partner">
         <div class="container">
             <div class="center wow fadeInDown">
-                <h2>Nos certifications techniques </h2>
+                <h2>Nos partenaires</h2>
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
             </div>    
 
             <div class="partners">
                 <ul>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="images/partners/partner1.png"></a></li>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="images/partners/partner2.png"></a></li>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" src="images/partners/partner3.png"></a></li>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="images/partners/partner4.png"></a></li>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="images/partners/partner5.png"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="images/partners/sage.png"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="images/partners/mobotix.png"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" src="images/partners/pelco.png"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="images/partners/gestimum.png"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="images/partners/horoquartz.png"></a></li>
                 </ul>
+                <ul>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="images/partners/hp.png"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="images/partners/dell.png"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="images/partners/windev.png"></a></li>
+                </ul>
+                
             </div>        
         </div><!--/.container-->
     </section><!--/#partner-->
