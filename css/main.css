@@ -97,7 +97,7 @@ a:focus {
 
 .dropdown-menu {
   margin-top: -1px;
-  min-width: 180px;
+  min-width: 250px;
 }
 
 .center h2{
@@ -608,6 +608,7 @@ input.search-form:hover {
   border-radius: 0;
   margin-bottom: 0;
 }
+
 
 .recent-work-wrap .recent-work-inner h3{
   margin: 10px 0;
