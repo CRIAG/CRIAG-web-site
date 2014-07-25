@@ -93,7 +93,7 @@
     
                              <li><a href="Agencement.html">Mobilier de bureau</a></li>              
                        
-                        <li><a href="contact-us.html">Contact</a></li> 
+                        <li><a href="contact-us.html">Contacts</a></li> 
                         
                        <?php 
 						require_once("classes/session.php");
