@@ -26,7 +26,9 @@ if(isset($_POST["load"]))
                       <div class="row">  
                           <div class="col-xs-12 col-sm-2 text-center">
                                     <div class="entry-meta">
-                                        <span id="publish_date"><?php echo escape(date("d M Y",strtotime($reclamation["re_date"])));?></span>
+                                        <span id="publish_date"><?php 
+										setlocale(LC_TIME, 'fra_fra');
+										echo escape(strftime(" %#d %b %Y",strtotime($reclamation["re_date"])));?></span>
                                         <span><i class="fa fa-user"></i> <a href="#"> 
                                         <?php echo  reduce_name(escape(ucwords($client_data["nom"]))." ".escape(ucwords($client_data["prenom"])));   ?>
                                         </a></span>
@@ -86,7 +88,9 @@ if(isset($_POST["load"]))
 								echo escape(ucwords($admin_data["nom"]))." ".escape(ucwords($admin_data["prenom"]))
 								?>
                                 </h3>
-                                <h4><?php echo escape(date("F j, Y, g:i a",strtotime($cmt["cmt_date"])));?> </h4>
+                                <h4><?php 
+								setlocale(LC_TIME, 'fra_fra');
+								echo escape(strftime("%#d %B %Y, %H:%M ",strtotime($cmt["cmt_date"])));?> </h4>
                                 <p><?php echo nl2br(escape($cmt["cmt_text"]));?></p>
                             </div>
                         </div>
