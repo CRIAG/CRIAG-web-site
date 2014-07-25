@@ -23,7 +23,7 @@ $admin_data=$admin->find_by_id($session->get_user_id());
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Blog Single | Corlate</title>
+    <title>Admin | <?php echo  escape(ucwords($admin_data["nom"]))." ".escape(ucwords($admin_data["prenom"]));   ?></title>
     
     <!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -127,7 +127,7 @@ $admin_data=$admin->find_by_id($session->get_user_id());
                                            
                          
                                                       
-                       <li><a href="includes/logout.php" id="loginbt">Logout</a>
+                       <li><a href="includes/logout.php"><i class="fa fa-sign-out" ></i></a></li>
                         
                     </ul>
                 </div>
