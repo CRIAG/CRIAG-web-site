@@ -91,7 +91,7 @@
 
                         </li>  
     
-                             <li><a href="contact-us.html">Mobilier de bureau</a></li>              
+                             <li><a href="Agencement.html">Mobilier de bureau</a></li>              
                        
                         <li><a href="contact-us.html">Contacts</a></li> 
                         
@@ -205,7 +205,7 @@
     <section id="services" class="service-item">
 	   <div class="container">
             <div class="center wow fadeInDown">
-                <h2>Our Service</h2>
+                <h2>Nos Services</h2>
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
             </div>
 
@@ -262,7 +262,7 @@
     <section id="partner">
         <div class="container">
             <div class="center wow fadeInDown">
-                <h2>Our Partners</h2>
+                <h2>Nos certifications techniques </h2>
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
             </div>    
 
