@@ -47,7 +47,7 @@ if(isset($_POST["commentaire"]))
 									echo escape(ucwords($admin_data["nom"]))." ".escape(ucwords($admin_data["prenom"]))
 									?>
 									</h3>
-									<h4><?php setlocale(LC_TIME, 'fra_fra');
+									<h4><?php setlocale(LC_TIME, 'fra_fra.utf8');
 								echo escape(strftime("%#d %B %Y, %H:%M ",strtotime($cmt_data["cmt_date"])));?> </h4>
 									<p><?php echo nl2br(escape($cmt_data["cmt_text"]));?></p>
                                     <a href="includes/delete_cmt.php?cmt_id=<?php  echo  escape($cmt_data["cmt_id"]);  ?>" onclick="return confirmation()">Supp</a>

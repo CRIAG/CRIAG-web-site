@@ -27,7 +27,7 @@ if(isset($_POST["load"]))
                           <div class="col-xs-12 col-sm-2 text-center">
                                     <div class="entry-meta">
                                         <span id="publish_date"><?php 
-										setlocale(LC_TIME, 'fra_fra');
+										setlocale(LC_TIME, 'fra_fra.utf8');
 										echo escape(strftime(" %#d %b %Y",strtotime($reclamation["re_date"])));?></span>
                                         <span><i class="fa fa-user"></i> <a href="#"> 
                                         <?php echo  reduce_name(escape(ucwords($client_data["nom"]))." ".escape(ucwords($client_data["prenom"])));   ?>
