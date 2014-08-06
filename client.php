@@ -48,23 +48,25 @@ $client_data=$client->find_by_id($session->get_user_id())
 
 <body>
 
+   
     <header id="header">
         <div class="top-bar">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-xs-4">
-                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  +0123 456 70 90</p></div>
+                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  +212 5 39 37 38 39</p></div>
                     </div>
                     <div class="col-sm-6 col-xs-8">
                        <div class="social">
-                            <ul class="social-share">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                            </ul>
-                            <div class="search">
+                       
+                        <ul class="social-share">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                        </ul>
+                                 <div class="search">
                                 <form role="form">
                                     <input type="text" class="search-form" autocomplete="off" placeholder="Search">
                                     <i class="fa fa-search"></i>
@@ -85,52 +87,54 @@ $client_data=$client->find_by_id($session->get_user_id())
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img src="images/criag.gif" alt="logo"></a>
+                <a class="navbar-brand" href="index.php"><img src="images/criag.gif" alt="logo" ></a>
                 </div>
                 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li ><a href="index.php">Accueil</a></li>
                         <li><a href="le_groupe.html">Le groupe</a></li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions de gestion<i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu">
+                        <li class="dropdown" ><a href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions de gestion<i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu" >
             
       
                              
                                <li><a href="ERP.html">ERP sage </a></li>
                                 <li><a href="Logiciel_CRIAG.html">Logiciel Criag</a></li>
-                                                               <li><a href="Gestimum.html">Gestimum</a></li>
-                                                                                              <li><a href="methodologie_gestion.html">Méthodologie</a></li>
+                                 <li ><a href="Gestimum.html">Gestimum</a></li>
+                                <li><a href="methodologie_gestion.html">Méthodologie</a></li>
                             </ul>
 
                         </li> <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions Réseaux<i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
-            
-      
-                             
-                               <li><a href="Camera_surveillance.html">Caméra de surveillance </a></li>
-                                <li><a href="Pointage_controle_d'acces.html">Pointage et contrôle d'accès</a></li>
-                                                               
-                                                                                              <li><a href="méthodologie_réseau.html">Méthodologie</a></li>
-                            </ul>
+                           <li><a href="installation_reseaux.html">Installation des réseaux</a></li>
+                           <li><a href="Camera_surveillance.html">Caméra de surveillance </a></li>
+                           <li><a href="Pointage_controle_d'acces.html">Pointage et contrôle d'accès</a></li>
+                           <li><a href="méthodologie_réseau.html">Méthodologie</a></li>
+                       </ul>
 
                         </li>  
     
-                             <li><a href="Agencement.html">Mobilier de bureau</a></li>              
+                     <li class="dropdown" ><a href="#" class="dropdown-toggle" data-toggle="dropdown">Matériel et mobilier <i class="fa fa-angle-down"></i></a>
+                     <ul class="dropdown-menu" style="min-width: 250px;">
+                     <li><a href="materiel_informatique.html">Matériel informatique</a></li> 
+                     <li><a href="materiel_informatique_consammable.html">Materiel informatique consommable</a></li> 
+                      <li><a href="Agencement.html">Mobilier de bureau</a></li>    
+                      
+                    </ul>
+                    </li>              
                        
-                     
-                        <li class="dropdown active">
-                         <li class="active"><a href="client.php">Client</a></li>
-                        </li>
+                        <li><a href="contact-us.html">Contact</a></li> 
+                        <li class="active"><a href="client.php">Client</a></li>
+         <li><a href="includes/logout.php"><i class="fa fa-sign-out" ></i></a></li>
+                        </ul>
+                        </div>
+                        </div>
+                        </nav>
+         
+    </header><!--/header-->                        
                         
                                            
-                        <li><a href="includes/logout.php"><i class="fa fa-sign-out" ></i></a></li>
-                    </ul>
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-        
-    </header><!--/header-->
 
 
     <section id="blog" class="container">
