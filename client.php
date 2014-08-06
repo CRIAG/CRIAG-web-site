@@ -22,7 +22,7 @@ $client_data=$client->find_by_id($session->get_user_id())
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Admin | <?php echo  escape(ucwords($client_data["nom"]))." ".escape(ucwords($client_data["prenom"]));   ?></title>
+    <title>Client | <?php echo  escape(ucwords($client_data["nom"]))." ".escape(ucwords($client_data["prenom"]));   ?></title>
     
     <!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">

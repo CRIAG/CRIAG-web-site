@@ -35,17 +35,24 @@
                     <div class="col-sm-6 col-xs-4">
                         <div class="top-number">
                           <p><i class="fa fa-phone-square"></i>  +212 5 39 93 38 39</p></div>
-                    </div>
-                    <div class="col-sm-6 col-xs-8">
-                       <div class="social">
-                       
-                                                            <div class="search">
+                      </div>
+                      <div class="col-sm-6 col-xs-8">
+                         <div class="social">
+                            <ul class="social-share">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                            </ul>
+
+                            <div class="search">
                                 <form role="form">
                                     <input type="text" class="search-form" autocomplete="off" placeholder="Search">
                                     <i class="fa fa-search"></i>
                                 </form>
-                           </div>
-                       </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div><!--/.container-->
@@ -62,66 +69,72 @@
                     </button>
                     <a class="navbar-brand" href="index.php"><img src="images/criag.gif" alt="logo" ></a>
                 </div>
-				
+
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.php">Accueil</a></li>
                         <li><a href="le_groupe.html">Le groupe</a></li>
                         <li class="dropdown"><a  href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions de gestion<i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-            
-      
-                             
-                               <li><a href="ERP.html">ERP sage </a></li>
-                                <li><a href="Logiciel_CRIAG.html">Logiciel Criag</a></li>
-                                                               <li><a href="Gestimum.html">Gestimum</a></li>
-                                                                                              <li><a href="methodologie_gestion.html">Méthodologie</a></li>
-                            </ul>
+                            <ul class="dropdown-menu">
 
-                        </li> <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions Réseaux<i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-            
-      
-                             
-                               <li><a href="Camera_surveillance.html">Caméra de surveillance </a></li>
-                                <li><a href="Pointage_controle_d'acces.html">Pointage et contrôle d'accès</a></li>
-                                                               
-                                                                                              <li><a href="méthodologie_réseau.html">Méthodologie</a></li>
-                            </ul>
 
-                        </li>  
-    
-                             <li><a href="Agencement.html">Mobilier de bureau</a></li>              
-                       
-                        <li><a href="contact-us.html">Contacts</a></li> 
-                        
-                       <?php 
-						require_once("classes/session.php");
-						$session =new   Session();
-						if($session->is_logedin() && $session->is_client()){
-						echo ' <li><a href="client.php">Client</a></li>';
-						echo ' <li><a href="includes/logout.php"><i class="fa fa-sign-out" ></i></a></li>';
-						}else if($session->is_logedin() && !$session->is_client())
-						{
-						echo ' <li><a href="admin.php">Admin</a></li>';
-						echo ' <li><a href="includes/logout.php"><i class="fa fa-sign-out" ></i></a></li>';
-						}else
-						{
-						echo '<li> <a href="#" id="loginbt"><i class="fa fa-sign-in" style="size:30px;"></i></a></li>';
-						echo '<li> <a href="formulaire.php">Inscription</a></li>';
-							
-						}
-						  ?>
-                          
-                       
+
+                             <li><a href="ERP.html">ERP sage </a></li>
+                             <li><a href="Logiciel_CRIAG.html">Logiciel Criag</a></li>
+                             <li><a href="Gestimum.html">Gestimum</a></li>
+                             <li><a href="methodologie_gestion.html">Méthodologie</a></li>
+                         </ul>
+
+                     </li> <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions Réseaux<i class="fa fa-angle-down"></i></a>
+                     <ul class="dropdown-menu">
+
+
+                       <li><a href="installation_reseaux.html">Installation des réseaux</a></li>
+                       <li><a href="Camera_surveillance.html">Caméra de surveillance </a></li>
+                       <li><a href="Pointage_controle_d'acces.html">Pointage et contrôle d'accès</a></li>
+
+                       <li><a href="méthodologie_réseau.html">Méthodologie</a></li>
+                   </ul>
+
+               </li>  
+
+                <li class="dropdown" ><a href="#" class="dropdown-toggle" data-toggle="dropdown">Matériel et mobilier <i class="fa fa-angle-down"></i></a>
+                     <ul class="dropdown-menu" style="min-width: 250px;">
+                     <li><a href="materiel_informatique.html">Matériel informatique</a></li> 
+                     <li><a href="materiel_informatique_consammable.html">Materiel informatique consommable</a></li> 
+                      <li><a href="Agencement.html">Mobilier de bureau</a></li>    
                       
-                       
                     </ul>
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-		
-    </header><!--/header-->
+                    </li>
+                 <li><a href="contact-us.html">Contacts</a></li> 
+
+               <?php 
+               require_once("classes/session.php");
+               $session =new   Session();
+               if($session->is_logedin() && $session->is_client()){
+                  echo ' <li><a href="client.php">Client</a></li>';
+                  echo ' <li><a href="includes/logout.php"><i class="fa fa-sign-out" ></i></a></li>';
+              }else if($session->is_logedin() && !$session->is_client())
+              {
+                  echo ' <li><a href="admin.php">Admin</a></li>';
+                  echo ' <li><a href="includes/logout.php"><i class="fa fa-sign-out" ></i></a></li>';
+              }else
+              {
+                  echo '<li> <a href="#" id="loginbt"><i class="fa fa-sign-in" style="size:30px;"></i></a></li>';
+                  echo '<li> <a href="formulaire.php">Inscription</a></li>';
+
+              }
+              ?>
+
+
+
+
+          </ul>
+      </div>
+  </div><!--/.container-->
+</nav><!--/nav-->
+
+</header><!--/header-->
 
     <section id="main-slider" class="no-margin">
         <div class="carousel slide">
