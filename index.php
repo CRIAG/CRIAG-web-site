@@ -317,15 +317,12 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="widget">
-                        <h3>Company</h3>
+                       <h3>Solutions de gestion</h3>
                         <ul>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">We are hiring</a></li>
-                            <li><a href="#">Meet the team</a></li>
-                            <li><a href="#">Copyright</a></li>
-                            <li><a href="#">Terms of use</a></li>
-                            <li><a href="#">Privacy policy</a></li>
-                            <li><a href="#">Contact us</a></li>
+                          <li><a href="ERP.html" title="solutions de gestion de sage ">ERP sage </a></li>
+                          <li><a href="Logiciel_CRIAG.html" title="solutions de gestion de CRIAG">Logiciel Criag</a></li>
+                          <li class="active"><a href="Gestimum.html" title="solutions de gestion de Gestimum">Gestimum</a></li>
+                          <li><a href="methodologie_gestion.html" title=" notre Methodologie">Méthodologie</a></li>
                         </ul>
                     </div>    
                 </div><!--/.col-md-3-->
