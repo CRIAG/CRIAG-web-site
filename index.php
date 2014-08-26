@@ -3,7 +3,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="Depuis les années 90, le monde a connu une trés forte évolution technologique informatique et 
+    telecommunication. Pour accompagner cette évolution fulgurante, l'équipe fondatrice de CRIAG,forte de son expérience et de ses
+     compétences s'est fixé comme premier objectif de fournir à ses partenaires ainsi qu'a ses clients des solutions intégrées et 
+     clé en main.Pour se faire des partenariats basés sur la compétence et la complémentarité sont nées pour mettre en commun 
+     toutes les synergies au service du client.En effet 
+      le groupe CRIAG peut être défini par le fort potentiel qui s'est crée autour des différentes société appartenant au groupe">
+
+       <meta name="keywords" content="CRIAG,pc halle,serviges,réseau ,gestion ,installation réseaux,Solutions de gestion,Solutions Réseaux, 
+       Matériel et mobilier ,ERP sage,Gestimum,Logiciel Criag,Caméra de surveillance,Pointage et contrôle d'accès,pointeuse,Matériel informatique,
+       Materiel informatique consommable,Mobilier de bureau,INTEGRATEUR DE SOLUTIONS DE GESTION,INTEGRATEUR DE SOLUTONS RESEAUX TELECOM ,INTEGRATEUR DE SOLUTONS VIDEO-SURVEILLANCE,
+       AGENCEMENT ET INSTALLATION DE BUREAU,hp,pelco,sage,mobotix,gestimum,dell,trarem, horoquartz,Sage ERP X3,sage comptabilité,
+       sage Finance,sage  Paie & RH,sage  Gestion Commerciale,sage  Gestion de Production,sage Gestion de la relation clients(CRM),
+       sage Pilotage,Sage Experts-Comptables,Gestimum ERP,Gestimum Gestion Commerciale,Gestimum Gestion Comptable,Bureaux,Sièges,Coloisons
+       ,Classement,Attents et salons,Comptoirs,Centre de Services,Siège de confernces,Mobilier sur mesure">
     <meta name="author" content="">
     <title>Accueil</title>
 	
@@ -151,13 +164,13 @@
                                 <div class="carousel-content" >
                                     <h1 class="animation animated-item-1" style="color:rgba(0,0,0,0.7)">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
                                     <h2 class="animation animated-item-2"  style="color:rgba(0,0,0,0.7)">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Plus...</a>
+                                    <a class="btn-slide animation animated-item-3" href="le_groupe.html#criag">Plus...</a>
                                 </div>
                             </div>
 
                             <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
-                                    <img src="images/slider/3LOGOS.png" class="img-responsive">
+                                    <img src="images/slider/3LOGOS.png" class="img-responsive" alt="CRIAG pc halle serviges">
                                 </div>
                             </div>
 
@@ -172,7 +185,7 @@
                                 <div class="carousel-content">
                                     <h1 class="animation animated-item-1" style="color:rgba(0,0,0,0.7)">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
                                     <h2 class="animation animated-item-2" style="color:rgba(0,0,0,0.7)">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Plus...</a>
+                                    <a class="btn-slide animation animated-item-3" href="le_groupe.html#pc_halle">Plus...</a>
                                 </div>
                             </div>
 
@@ -189,12 +202,12 @@
                                 <div class="carousel-content">
                                     <h1 class="animation animated-item-1" style="color:rgba(0,0,0,0.7)" >Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
                                     <h2 class="animation animated-item-2" style="color:rgba(0,0,0,0.7)">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">plus...</a>
+                                    <a class="btn-slide animation animated-item-3" href="le_groupe.html#serviges">plus...</a>
                                 </div>
                             </div>
                             <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
-                                    <img src="images/slider/chaise4.gif" class="img-responsive">
+                                    <img src="images/slider/chaise4.gif" class="img-responsive" alt="chaise">
                                 </div>
                             </div>
                         </div>
@@ -215,7 +228,7 @@
 	   <div class="container">
             <div class="center wow fadeInDown">
                 <h2>Nos Services</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <p class="lead">Nous proposons une large gamme de services, aux particuliers comme aux entreprises, dont voici un aperçu.</p>
             </div>
 
             <div class="row">
@@ -223,11 +236,11 @@
                 <div class="col-sm-6 col-md-4">
                     <div class="media services-wrap wow fadeInDown">
                         <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services1.png">
+                            <img class="img-responsive" src="images/services/services1.png" alt="solutions de gestion">
                         </div>
                         <div class="media-body">
                             <h3 class="media-heading">INTEGRATEUR DE SOLUTIONS DE GESTION</h3>
-                            <p>Lorem ipsum </br> dolor sit  ame consectetur  adipisicing elit </br></p>
+                            <p>les solutions de haute gamme au service des PME et PMI. <br/><br/></br></p>
                         </div>
                     </div>
                 </div>
@@ -235,11 +248,11 @@
                 <div class="col-sm-6 col-md-4">
                     <div class="media services-wrap wow fadeInDown">
                         <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services2.png">
+                            <img class="img-responsive" src="images/services/services2.png" alt="RESEAUX TELECOM ET VIDEO-SURVEILLANCE">
                         </div>
                         <div class="media-body">
                             <h3 class="media-heading">INTEGRATEUR DE SOLUTONS RESEAUX TELECOM ET VIDEO-SURVEILLANCE</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing  elit</p> 
+                            <p>notre expérience dans le domaine vos garanties les solutions convenables à vos problèmes</p> 
                         </div>
                     </div>
                 </div>
@@ -247,11 +260,11 @@
                 <div class="col-sm-6 col-md-4">
                     <div class="media services-wrap wow fadeInDown">
                         <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services3.png">
+                            <img class="img-responsive" src="images/services/services3.png" alt="agencement">
                         </div>
                         <div class="media-body">
                             <h3 class="media-heading">AGENCEMENT ET INSTALLATION DE BUREAU</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing <br/> elit <br/></p>
+                            <p>vous allez trouver chez nous les dernières tendances du marché.<br/><br/><br/></p>
                         </div>
                     </div>
                 </div>
@@ -272,21 +285,24 @@
         <div class="container">
             <div class="center wow fadeInDown">
                 <h2>Nos partenaires</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <p class="lead">
+                    Le succès de CRIAG, c'est un réseau de partenaires de confiance  en Europe et dans le monde. Prestations complémentaires, fournisseurs, ... nos partenaires nous permettent de vous offrir des solutions globales. Demandez nous l'impossible !
+
+                </p>
             </div>    
 
             <div class="partners">
                 <ul>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="images/partners/sage.png"></a></li>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="images/partners/mobotix2.png"></a></li>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" src="images/partners/pelco.png"></a></li>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="images/partners/gestimum.png"></a></li>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="images/partners/horoquartz.png"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="images/partners/sage.png" alt="sage logo"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="images/partners/mobotix2.png" alt="mobotix logo"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" src="images/partners/pelco.png" alt="pelco logo"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="images/partners/gestimum.png" alt="gestimum logo"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="images/partners/horoquartz.png" alt="horoquartz logo"></a></li>
                 </ul>
                 <ul>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="images/partners/hp.png"></a></li>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="images/partners/dell.png"></a></li>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="images/partners/trarem.png"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="images/partners/hp.png" alt="hp logo"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="images/partners/dell.png" alt="dell logo"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="images/partners/trarem.png" alt="trarem logo"></a></li>
                 </ul>
                 
             </div>        
@@ -302,8 +318,9 @@
                             <i class="fa fa-phone"></i>
                         </div>
                         <div class="media-body">
-                            <h2>Have a question or need a custom quote?</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation +0123 456 70 80</p>
+                            <h2>Vous avez des questions ou besoin d'aide?</h2>
+                            <p>Si vous avez besoin d'informations complémentaires n'hésitez pas à nous
+                             contacter au numéro +212 5 39 93 38 39 ou <a href="contact-us.html" title="contact page">Envoyez-nous un email</a> </p>
                         </div>
                     </div>
                 </div>
@@ -372,10 +389,10 @@
                 <hr/><br/>
                 <label>Email : </label>
                 <br/>
-                <input type="text" id="email" placeholder="Ex -john123"/><br/>
+                <input type="text" id="email" placeholder="Ex -exmp@exmpl.com"/><br/>
                 <br/>
                 <label>password : </label>
-                <input type="text" id="password" placeholder="************"/><br/>
+                <input type="password" id="password" placeholder="************"/><br/>
                 <br/>
                 <input type="button" id="loginbtn" value="Login"/>
                 <input type="button" id="cancel" value="Cancel"/>
