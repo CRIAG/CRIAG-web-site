@@ -234,7 +234,7 @@ $session = new Session();
                     <ul class="pull-right">
                         <li><a href="index.php">Accueil</a></li>
                         <li><a href="contact-us.html">Contacts</a></li>
-                        <li>   <a target="_blank" href="http://ma.linkedin.com/pub/otmane-el-guanouni/83/b04/34a/" title="otmane el guenouni lineked "> <small>Créé par Otmane  El Guenouni</small></a> 
+                        <li>   <a target="_blank" href="http://ma.linkedin.com/pub/otmane-el-guenouni/83/b04/34a/" title="otmane el guenouni linkedin profil "> <small>Créé par Otmane  El Guenouni</small></a> 
 </li>
                     </ul>
                 </div>
