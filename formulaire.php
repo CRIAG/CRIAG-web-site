@@ -14,7 +14,7 @@ $session = new Session();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Inscription | Corlate</title>
+    <title>Inscription | CRIAG</title>
     
     <!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -180,7 +180,6 @@ $session = new Session();
                           <li><a href="ERP.html" title="solutions de gestion de sage ">ERP sage </a></li>
                           <li><a href="Logiciel_CRIAG.html" title="solutions de gestion de CRIAG">Logiciel Criag</a></li>
                           <li class="active"><a href="Gestimum.html" title="solutions de gestion de Gestimum">Gestimum</a></li>
-                          <li><a href="methodologie_gestion.html" title=" notre Methodologie">Méthodologie</a></li>
                         </ul>
                     </div>    
                 </div><!--/.col-md-3-->
@@ -193,7 +192,6 @@ $session = new Session();
                        <li><a href="Camera_surveillance.html" title="Camera de surveillance">Caméra de surveillance </a></li>
                        <li><a href="Pointage_controle_d'acces.html" title="Pointage controle d'acces">Pointage et contrôle d'accès</a></li>
 
-                       <li><a href="méthodologie_réseau.html" title="notre méthodologie réseau">Méthodologie</a></li>
                    </ul>
                     </div>    
                 </div><!--/.col-md-3-->

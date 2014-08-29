@@ -239,8 +239,8 @@
                             <img class="img-responsive" src="images/services/services1.png" alt="solutions de gestion">
                         </div>
                         <div class="media-body">
-                            <h3 class="media-heading">INTEGRATEUR DE SOLUTIONS DE GESTION</h3>
-                            <p>les solutions de haute gamme au service des PME et PMI. <br/><br/></br></p>
+                            <h3 class="media-heading">INTEGRATEUR DE SOLUTIONS DE GESTION MODULAIRE ET ERP</h3>
+                            <p>les solutions de haute gamme au service des PME et PMI.<br/> <br/><br/></br></p>
                         </div>
                     </div>
                 </div>
@@ -252,7 +252,7 @@
                         </div>
                         <div class="media-body">
                             <h3 class="media-heading">INTEGRATEUR DE SOLUTONS RESEAUX TELECOM ET VIDEO-SURVEILLANCE</h3>
-                            <p>notre expérience dans le domaine vos garanties les solutions convenables à vos problèmes</p> 
+                            <p>notre expérience dans le domaine vous garantit les solutions convenables à vos problèmes<br/><br/></p> 
                         </div>
                     </div>
                 </div>
@@ -263,8 +263,8 @@
                             <img class="img-responsive" src="images/services/services3.png" alt="agencement">
                         </div>
                         <div class="media-body">
-                            <h3 class="media-heading">AGENCEMENT ET INSTALLATION DE BUREAU</h3>
-                            <p>vous allez trouver chez nous les dernières tendances du marché.<br/><br/><br/></p>
+                            <h3 class="media-heading">AGENCEMENT ET INSTALLATION DE MOBLIER DE BUREAU ET MATÈRIEL INFORMATIQUE</h3>
+                            <p>vous allez trouver chez nous les dernières tendances du marché.</p>
                         </div>
                     </div>
                 </div>
@@ -338,7 +338,7 @@
                           <li><a href="ERP.html" title="solutions de gestion de sage ">ERP sage </a></li>
                           <li><a href="Logiciel_CRIAG.html" title="solutions de gestion de CRIAG">Logiciel Criag</a></li>
                           <li class="active"><a href="Gestimum.html" title="solutions de gestion de Gestimum">Gestimum</a></li>
-                          <li><a href="methodologie_gestion.html" title=" notre Methodologie">Méthodologie</a></li>
+                          
                         </ul>
                     </div>    
                 </div><!--/.col-md-3-->
@@ -351,7 +351,7 @@
                        <li><a href="Camera_surveillance.html" title="Camera de surveillance">Caméra de surveillance </a></li>
                        <li><a href="Pointage_controle_d'acces.html" title="Pointage controle d'acces">Pointage et contrôle d'accès</a></li>
 
-                       <li><a href="méthodologie_réseau.html" title="notre méthodologie réseau">Méthodologie</a></li>
+                      
                    </ul>
                     </div>    
                 </div><!--/.col-md-3-->

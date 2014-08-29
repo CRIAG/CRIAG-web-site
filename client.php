@@ -262,7 +262,6 @@ $client_data=$client->find_by_id($session->get_user_id())
                           <li><a href="ERP.html" title="solutions de gestion de sage ">ERP sage </a></li>
                           <li><a href="Logiciel_CRIAG.html" title="solutions de gestion de CRIAG">Logiciel Criag</a></li>
                           <li class="active"><a href="Gestimum.html" title="solutions de gestion de Gestimum">Gestimum</a></li>
-                          <li><a href="methodologie_gestion.html" title=" notre Methodologie">Méthodologie</a></li>
                         </ul>
                     </div>    
                 </div><!--/.col-md-3-->
@@ -275,7 +274,6 @@ $client_data=$client->find_by_id($session->get_user_id())
                        <li><a href="Camera_surveillance.html" title="Camera de surveillance">Caméra de surveillance </a></li>
                        <li><a href="Pointage_controle_d'acces.html" title="Pointage controle d'acces">Pointage et contrôle d'accès</a></li>
 
-                       <li><a href="méthodologie_réseau.html" title="notre méthodologie réseau">Méthodologie</a></li>
                    </ul>
                     </div>    
                 </div><!--/.col-md-3-->
