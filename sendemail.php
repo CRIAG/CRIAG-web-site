@@ -8,7 +8,7 @@
     $number=@trim(stripslashes($_POST['number'])); 
    
     $email_from = $email;
-    $email_to = 'the_loverboy@hotmail.fr';//replace with your email
+    $email_to = 'elazizi.pchalle@gmail.com ';//replace with your email
     if(!empty($name) && !empty($email) && !empty($subject) && !empty($message) )
     {
         $body = 'Name: ' . $name . "\n\n" . 'Email: ' . $email . "\n\n" . 'Subject: ' . $subject . "\n\n" . 'Message: ' . $message;

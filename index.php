@@ -52,11 +52,11 @@
                       <div class="col-sm-6 col-xs-8">
                          <div class="social">
                             <ul class="social-share">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.facebook.com/criaggroup" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/CRIAGgroup" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
                                 <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                <li><a href="skype:criag.group?userinfo"><i class="fa fa-skype"></i></a></li>
                             </ul>
 
                             <div class="search">
@@ -162,8 +162,12 @@
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content" >
-                                    <h1 class="animation animated-item-1" style="color:rgba(0,0,0,0.7)">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2"  style="color:rgba(0,0,0,0.7)">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                    <h1 class="animation animated-item-1" style="color:rgba(0,0,0,0.7)">Conseils Réalisations Informatique Appliqués à la Gestion
+
+C R I A G</h1>
+                                    <h2 class="animation animated-item-2"  style="color:rgba(0,0,0,0.7)">L’équipe Criag vous accompagne dans vos projets en devenant le partenaire idéal pour tous vos besoins informatiques !<br/>
+Concentrez-vous pleinement sur vos métiers.....
+</h2>
                                     <a class="btn-slide animation animated-item-3" href="le_groupe.html#criag">Plus...</a>
                                 </div>
                             </div>
@@ -183,8 +187,10 @@
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
-                                    <h1 class="animation animated-item-1" style="color:rgba(0,0,0,0.7)">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2" style="color:rgba(0,0,0,0.7)">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                    <h1 class="animation animated-item-1" style="color:rgba(0,0,0,0.7)">PCHALLE: Intégrateur Informatique</h1>
+                                    <h2 class="animation animated-item-2" style="color:rgba(0,0,0,0.7)">Centre de compétence SAGE   GESTIMUM   CRIAG  
+Nous vous accompagnons depuis le 1ER Réfection.....
+</h2>
                                     <a class="btn-slide animation animated-item-3" href="le_groupe.html#pc_halle">Plus...</a>
                                 </div>
                             </div>
@@ -414,6 +420,9 @@
                         <li><a href="contact-us.html">Contacts</a></li>
                         <li>   <a target="_blank" href="http://ma.linkedin.com/pub/otmane-el-guenouni/83/b04/34a/" title="otmane el guenouni linkedin profil "> <small>Créé par Otmane  El Guenouni</small></a> 
 </li>
+<li>
+  <a href="#" onclick="window.open('https://www.sitelock.com/verify.php?site=www.pchalle.com','SiteLock','width=300,height=300,left=80,top=80');" ><img alt="website security" width="70" title="SiteLock" src="//shield.sitelock.com/shield/www.pchalle.com"/></a>
+</li>
                     </ul>
                 </div>
             </div>
@@ -493,5 +502,15 @@
     });
 
     </script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55208366-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
