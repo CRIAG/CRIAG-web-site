@@ -74,7 +74,7 @@ $session = new Session();
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>
+                     <a class="navbar-brand" href="index.php"><img src="images/criag.gif" alt="logo" ></a>
                 </div>
 				
                 <div class="collapse navbar-collapse navbar-right">

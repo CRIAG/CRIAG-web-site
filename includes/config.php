@@ -1,8 +1,8 @@
 <?php
-	define("DB_SERVER","pchallecom.ipagemysql.com");
-	define("DB_USER","criag");
-	define("DB_NAME","criag");
-	define("DB_PASS","cr1@g");
+	define("DB_SERVER","localhost");
+	define("DB_USER","root");
+	define("DB_NAME","mydb");
+	define("DB_PASS","");
 	
 
 	

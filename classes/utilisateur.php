@@ -34,7 +34,7 @@ protected static $_table = "utilisateur";
 		{
 			global $db;
 
-			$sql = "SELECT password FROM " . self::$_table;
+			$sql = "SELECT password FROM " .strtolower( self::$_table);
 			$sql .= " WHERE email=:email"; 
 			$sql .= " LIMIT 1;";
 
@@ -57,7 +57,7 @@ protected static $_table = "utilisateur";
 		{
 			global $db;
 
-			$sql = "INSERT INTO " . self::$_table;
+			$sql = "INSERT INTO " . strtolower(self::$_table);
 			$sql .= " (" . implode(",",array_keys($this->utilisateur)) . ")";
 			$sql .= " values(:".implode(", :",array_keys($this->utilisateur)) . ");";
 			
@@ -79,7 +79,7 @@ protected static $_table = "utilisateur";
 			
 			$db->query($sql);
 			
-			$sql = " DELETE FROM " .self::$_table;
+			$sql = " DELETE FROM " .strtolower(self::$_table);
 			$sql .= " WHERE u_id=:u_id;"; 
 			$re = $db->query($sql, array("u_id"=>$this->utilisateur["u_id"]));
 
@@ -107,7 +107,7 @@ protected static $_table = "utilisateur";
 				$array_key_key[] = $key . "=:" . $key;
 			}
 			
-			$sql = "UPDATE " . self::$_table;
+			$sql = "UPDATE " .strtolower( self::$_table);
 			$sql .= " SET ". implode(",", $array_key_key);
 			$sql .= " WHERE u_id=:u_id;";
 			

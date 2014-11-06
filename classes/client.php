@@ -60,7 +60,7 @@ class Client extends Utilisateur {
 
 			$sql = "SELECT * FROM ".parent::$_table ;
 			$sql .= " WHERE u_id=:id" ; 
-			$sql .= " and u_id in (select * from Client)";
+			$sql .= " and u_id in (select * from client)";
 			$sql .= " LIMIT 1;";
 
 			$re = $db->query($sql, array("id"=>$id));
@@ -76,7 +76,7 @@ class Client extends Utilisateur {
 			global $db;
 			$sql="select * from ".parent::$_table;
 			$sql.=" where email=:email"; 
-			$sql .= " and u_id in (select * from Client)";
+			$sql .= " and u_id in (select * from client)";
 			$sql.=" limit 1;";
 			$re=$db->query($sql,array("email"=>$email));
 			$resultat=$re->fetch(PDO::FETCH_ASSOC);
